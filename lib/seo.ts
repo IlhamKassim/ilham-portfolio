@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 
 export const defaultMetadata: Metadata = {
+  metadataBase: new URL('https://ilham-portfolio.vercel.app'),
   title: 'Mohammad Ilham bin Kassim | Computer Engineering Student',
   description: 'Computer Engineering student at Penn State University specializing in AI & Systems Programming, Leadership & Innovation. Building human-centered systems and data-driven products.',
   keywords: ['Mohammad Ilham bin Kassim', 'Computer Engineering', 'Penn State', 'AI', 'Machine Learning', 'Systems Programming', 'Leadership'],
