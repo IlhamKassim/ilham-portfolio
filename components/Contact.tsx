@@ -125,13 +125,15 @@ export default function Contact() {
                 Let&apos;s Work Together
               </h3>
               <p className="mb-6 text-muted-foreground">
-                I&apos;m always interested in new opportunities, collaborations, and
-                meaningful conversations. Whether you have a project in mind or
-                just want to connect, I&apos;d love to hear from you.
+                I&apos;m always interested in new opportunities, collaborations,
+                and meaningful conversations. Whether you have a project in mind
+                or just want to connect, I&apos;d love to hear from you.
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <Button size="lg" asChild>
-                  <a href={`mailto:${profile.email}?subject=Let&apos;s Connect`}>
+                  <a
+                    href={`mailto:${profile.email}?subject=Let&apos;s Connect`}
+                  >
                     <Mail className="mr-2 h-4 w-4" />
                     Send Email
                   </a>
