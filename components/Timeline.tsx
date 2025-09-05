@@ -9,6 +9,7 @@ interface TimelineItem {
   org: string
   dates: string
   bullets: string[]
+  tech?: string[]
 }
 
 interface TimelineProps {
@@ -58,7 +59,7 @@ export default function Timeline({ items }: TimelineProps) {
                   </span>
                 </div>
                 <p className="mb-4 font-medium text-primary">{item.org}</p>
-                <ul className="space-y-2">
+                <ul className="mb-4 space-y-2">
                   {item.bullets.map((bullet, bulletIndex) => (
                     <li
                       key={bulletIndex}
@@ -69,6 +70,18 @@ export default function Timeline({ items }: TimelineProps) {
                     </li>
                   ))}
                 </ul>
+                {item.tech && item.tech.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {item.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>

@@ -4,6 +4,7 @@ import './globals.css'
 import { defaultMetadata } from '@/lib/seo'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { profile } from '@/lib/data'
 
 const inter = Inter({
   display: 'swap',
@@ -19,6 +20,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: profile.name,
+              jobTitle: profile.headline,
+              email: profile.email,
+              telephone: profile.phone,
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'State College',
+                addressRegion: 'PA',
+                addressCountry: 'USA',
+              },
+              url: 'https://ilham-portfolio-three.vercel.app',
+              sameAs: [profile.linkedin, profile.github],
+              description: profile.tagline,
+            }),
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <a
           href="#main"

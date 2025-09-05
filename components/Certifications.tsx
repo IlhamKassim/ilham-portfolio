@@ -28,11 +28,30 @@ export default function Certifications() {
           >
             <Card className="transition-shadow hover:shadow-md">
               <CardContent className="p-6">
-                <div className="flex items-center space-x-3">
-                  <div className="rounded-lg bg-primary/10 p-2">
-                    <Award className="h-5 w-5 text-primary" />
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="rounded-lg bg-primary/10 p-2">
+                      <Award className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-foreground">
+                        {typeof cert === 'string' ? cert : cert.name}
+                      </p>
+                      {typeof cert === 'object' && cert.issuer && (
+                        <p className="text-sm text-muted-foreground">
+                          {cert.issuer}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                  <p className="font-medium text-foreground">{cert}</p>
+                  {typeof cert === 'object' && cert.date && (
+                    <p className="text-xs text-muted-foreground">
+                      {new Date(cert.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                      })}
+                    </p>
+                  )}
                 </div>
               </CardContent>
             </Card>

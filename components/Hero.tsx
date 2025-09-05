@@ -5,7 +5,7 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { Mail, Phone, MapPin, Linkedin, Download } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin, Download, Github } from 'lucide-react'
 import { profile } from '@/lib/data'
 
 export default function Hero() {
@@ -61,17 +61,32 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mb-6 text-xl text-muted-foreground md:text-2xl"
           >
-            {profile.role}
+            {profile.headline}
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mx-auto mb-12 max-w-3xl text-lg text-muted-foreground"
+            className="mx-auto mb-6 max-w-3xl text-lg text-muted-foreground"
           >
             {profile.tagline}
           </motion.p>
+
+          {/* Open to section */}
+          {profile.openTo && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="mx-auto mb-12 max-w-2xl"
+            >
+              <p className="text-sm text-muted-foreground">
+                <span className="font-semibold text-foreground">Open to:</span>{' '}
+                {profile.openTo.join(' • ')}
+              </p>
+            </motion.div>
+          )}
 
           {/* Contact Info */}
           <motion.div
@@ -101,6 +116,15 @@ export default function Hero() {
               <Linkedin className="h-4 w-4" />
               <span className="text-sm">LinkedIn</span>
             </a>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-muted-foreground transition-colors hover:text-primary"
+            >
+              <Github className="h-4 w-4" />
+              <span className="text-sm">GitHub</span>
+            </a>
           </motion.div>
 
           {/* CTA Buttons */}
@@ -125,6 +149,21 @@ export default function Hero() {
               <a href={`mailto:${profile.email}`}>
                 <Mail className="h-4 w-4" />
                 <span>Email Me</span>
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="flex items-center space-x-2"
+              asChild
+            >
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-4 w-4" />
+                <span>View GitHub</span>
               </a>
             </Button>
           </motion.div>
