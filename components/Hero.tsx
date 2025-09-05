@@ -36,10 +36,11 @@ export default function Hero() {
           >
             <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-primary/20">
               <Image
-                src="/images/headshot-placeholder.svg"
+                src={profile.avatar ?? '/avatar.jpg'}
                 alt="Mohammad Ilham bin Kassim"
-                fill
-                className="object-cover"
+                width={640}
+                height={640}
+                className="rounded-full border border-border object-cover shadow"
                 priority
               />
             </div>

@@ -122,16 +122,16 @@ export default function Contact() {
           <Card>
             <CardContent className="p-8">
               <h3 className="mb-4 text-xl font-semibold">
-                Let's Work Together
+                Let&apos;s Work Together
               </h3>
               <p className="mb-6 text-muted-foreground">
-                I'm always interested in new opportunities, collaborations, and
+                I&apos;m always interested in new opportunities, collaborations, and
                 meaningful conversations. Whether you have a project in mind or
-                just want to connect, I'd love to hear from you.
+                just want to connect, I&apos;d love to hear from you.
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <Button size="lg" asChild>
-                  <a href={`mailto:${profile.email}?subject=Let's Connect`}>
+                  <a href={`mailto:${profile.email}?subject=Let&apos;s Connect`}>
                     <Mail className="mr-2 h-4 w-4" />
                     Send Email
                   </a>

@@ -6,6 +6,7 @@ export const profile = {
   tagline:
     'Building human-centered systems, data-driven products, and inclusive programs.',
   location: 'State College, PA, USA',
+  avatar: '/avatar.jpg',
   email: 'ilhamkassim2003@gmail.com',
   phone: '(814) 441-4137',
   linkedin: 'https://www.linkedin.com/in/ilhamkassim',
