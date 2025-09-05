@@ -6,8 +6,8 @@ import { profile } from '@/lib/data'
 
 export default function Skills() {
   return (
-    <Section 
-      id="skills" 
+    <Section
+      id="skills"
       title="Skills"
       intro="Technologies and competencies I work with"
     >

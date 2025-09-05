@@ -3,8 +3,17 @@ import { Metadata } from 'next'
 export const defaultMetadata: Metadata = {
   metadataBase: new URL('https://ilham-portfolio.vercel.app'),
   title: 'Mohammad Ilham bin Kassim | Computer Engineering Student',
-  description: 'Computer Engineering student at Penn State University specializing in AI & Systems Programming, Leadership & Innovation. Building human-centered systems and data-driven products.',
-  keywords: ['Mohammad Ilham bin Kassim', 'Computer Engineering', 'Penn State', 'AI', 'Machine Learning', 'Systems Programming', 'Leadership'],
+  description:
+    'Computer Engineering student at Penn State University specializing in AI & Systems Programming, Leadership & Innovation. Building human-centered systems and data-driven products.',
+  keywords: [
+    'Mohammad Ilham bin Kassim',
+    'Computer Engineering',
+    'Penn State',
+    'AI',
+    'Machine Learning',
+    'Systems Programming',
+    'Leadership',
+  ],
   authors: [{ name: 'Mohammad Ilham bin Kassim' }],
   creator: 'Mohammad Ilham bin Kassim',
   openGraph: {
@@ -12,7 +21,8 @@ export const defaultMetadata: Metadata = {
     locale: 'en_US',
     url: 'https://ilhamkassim.com',
     title: 'Mohammad Ilham bin Kassim | Computer Engineering Student',
-    description: 'Computer Engineering student at Penn State University specializing in AI & Systems Programming, Leadership & Innovation.',
+    description:
+      'Computer Engineering student at Penn State University specializing in AI & Systems Programming, Leadership & Innovation.',
     siteName: 'Ilham Kassim Portfolio',
     images: [
       {
@@ -26,7 +36,8 @@ export const defaultMetadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Mohammad Ilham bin Kassim | Computer Engineering Student',
-    description: 'Computer Engineering student at Penn State University specializing in AI & Systems Programming, Leadership & Innovation.',
+    description:
+      'Computer Engineering student at Penn State University specializing in AI & Systems Programming, Leadership & Innovation.',
     images: ['/og.png'],
   },
   robots: {

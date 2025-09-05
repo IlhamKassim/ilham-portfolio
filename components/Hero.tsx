@@ -13,26 +13,28 @@ export default function Hero() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section 
-      id="hero" 
+    <section
+      id="hero"
       ref={ref}
-      className="min-h-screen flex items-center justify-center pt-20 pb-16"
+      className="flex min-h-screen items-center justify-center pb-16 pt-20"
     >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center"
+          className="mx-auto max-w-4xl text-center"
         >
           {/* Profile Image */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
-            animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
+            animate={
+              isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }
+            }
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-8"
           >
-            <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/20">
+            <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-primary/20">
               <Image
                 src="/images/headshot-placeholder.svg"
                 alt="Mohammad Ilham bin Kassim"
@@ -48,7 +50,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-4xl md:text-6xl font-bold mb-4"
+            className="mb-4 text-4xl font-bold md:text-6xl"
           >
             {profile.name}
           </motion.h1>
@@ -57,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-6"
+            className="mb-6 text-xl text-muted-foreground md:text-2xl"
           >
             {profile.role}
           </motion.p>
@@ -66,7 +68,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto"
+            className="mx-auto mb-12 max-w-3xl text-lg text-muted-foreground"
           >
             {profile.tagline}
           </motion.p>
@@ -76,7 +78,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 1.0 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
+            className="mb-12 flex flex-wrap justify-center gap-4"
           >
             <div className="flex items-center space-x-2 text-muted-foreground">
               <Mail className="h-4 w-4" />
@@ -94,7 +96,7 @@ export default function Hero() {
               href={profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center space-x-2 text-muted-foreground transition-colors hover:text-primary"
             >
               <Linkedin className="h-4 w-4" />
               <span className="text-sm">LinkedIn</span>
@@ -106,7 +108,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col justify-center gap-4 sm:flex-row"
           >
             <Button size="lg" className="flex items-center space-x-2" asChild>
               <a href="/Ilham_Resume.pdf" download>
@@ -114,9 +116,9 @@ export default function Hero() {
                 <span>Download Résumé</span>
               </a>
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
+            <Button
+              variant="outline"
+              size="lg"
               className="flex items-center space-x-2"
               asChild
             >

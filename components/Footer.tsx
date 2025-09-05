@@ -9,15 +9,16 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-muted/50 border-t border-border">
+    <footer className="border-t border-border bg-muted/50">
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+        <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <div className="text-center md:text-left">
             <p className="text-muted-foreground">
-              © {new Date().getFullYear()} Mohammad Ilham bin Kassim. All rights reserved.
+              © {new Date().getFullYear()} Mohammad Ilham bin Kassim. All
+              rights reserved.
             </p>
           </div>
-          
+
           <Button
             variant="ghost"
             size="sm"

@@ -12,13 +12,19 @@ interface SectionProps {
   intro?: string
 }
 
-export default function Section({ id, title, children, className = '', intro }: SectionProps) {
+export default function Section({
+  id,
+  title,
+  children,
+  className = '',
+  intro,
+}: SectionProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section 
-      id={id} 
+    <section
+      id={id}
       ref={ref}
       className={`py-16 ${className}`}
       aria-labelledby={`${id}-title`}
@@ -28,16 +34,16 @@ export default function Section({ id, title, children, className = '', intro }: 
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
+          className="mx-auto max-w-4xl"
         >
-          <h2 
+          <h2
             id={`${id}-title`}
-            className="text-3xl md:text-4xl font-bold text-center mb-4"
+            className="mb-4 text-center text-3xl font-bold md:text-4xl"
           >
             {title}
           </h2>
           {intro && (
-            <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            <p className="mx-auto mb-12 max-w-2xl text-center text-muted-foreground">
               {intro}
             </p>
           )}

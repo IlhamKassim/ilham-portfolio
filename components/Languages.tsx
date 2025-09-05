@@ -13,12 +13,12 @@ export default function Languages() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <Section 
-      id="languages" 
+    <Section
+      id="languages"
       title="Languages"
       intro="Languages I speak and write"
     >
-      <div ref={ref} className="max-w-2xl mx-auto">
+      <div ref={ref} className="mx-auto max-w-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -26,8 +26,8 @@ export default function Languages() {
         >
           <Card>
             <CardContent className="p-6">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="p-2 bg-primary/10 rounded-lg">
+              <div className="mb-4 flex items-center space-x-3">
+                <div className="rounded-lg bg-primary/10 p-2">
                   <Globe className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold">Language Proficiency</h3>
@@ -37,16 +37,20 @@ export default function Languages() {
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                    animate={
+                      isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                    }
                     transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                    className="flex items-center justify-between p-3 bg-muted/50 rounded-lg"
+                    className="flex items-center justify-between rounded-lg bg-muted/50 p-3"
                   >
-                    <span className="font-medium text-foreground">{language}</span>
+                    <span className="font-medium text-foreground">
+                      {language}
+                    </span>
                     <div className="flex space-x-1">
                       {[...Array(5)].map((_, i) => (
                         <div
                           key={i}
-                          className="w-2 h-2 bg-primary rounded-full"
+                          className="h-2 w-2 rounded-full bg-primary"
                         />
                       ))}
                     </div>

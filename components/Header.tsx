@@ -33,10 +33,10 @@ export default function Header() {
   }
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-background/80 backdrop-blur-md border-b border-border' 
+    <header
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'border-b border-border bg-background/80 backdrop-blur-md'
           : 'bg-transparent'
       }`}
     >
@@ -45,19 +45,19 @@ export default function Header() {
           {/* Logo */}
           <button
             onClick={() => scrollToSection('hero')}
-            className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
+            className="text-2xl font-bold text-primary transition-colors hover:text-primary/80"
             aria-label="Go to top"
           >
             Ilham
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden items-center space-x-8 md:flex">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="font-medium text-foreground transition-colors hover:text-primary"
               >
                 {item.name}
               </button>
@@ -66,27 +66,31 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="flex items-center space-x-4 md:hidden">
             <DarkModeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-md hover:bg-accent transition-colors"
+              className="rounded-md p-2 transition-colors hover:bg-accent"
               aria-label="Toggle mobile menu"
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-border">
+          <div className="mt-4 border-t border-border py-4 md:hidden">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+                  className="py-2 text-left font-medium text-foreground transition-colors hover:text-primary"
                 >
                   {item.name}
                 </button>

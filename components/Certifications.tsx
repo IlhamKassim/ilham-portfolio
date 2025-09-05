@@ -13,8 +13,8 @@ export default function Certifications() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <Section 
-      id="certifications" 
+    <Section
+      id="certifications"
       title="Certifications"
       intro="Professional certifications and learning achievements"
     >
@@ -26,15 +26,13 @@ export default function Certifications() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
           >
-            <Card className="hover:shadow-md transition-shadow">
+            <Card className="transition-shadow hover:shadow-md">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-primary/10 rounded-lg">
+                  <div className="rounded-lg bg-primary/10 p-2">
                     <Award className="h-5 w-5 text-primary" />
                   </div>
-                  <p className="font-medium text-foreground">
-                    {cert}
-                  </p>
+                  <p className="font-medium text-foreground">{cert}</p>
                 </div>
               </CardContent>
             </Card>

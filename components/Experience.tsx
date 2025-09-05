@@ -6,8 +6,8 @@ import { profile } from '@/lib/data'
 
 export default function Experience() {
   return (
-    <Section 
-      id="experience" 
+    <Section
+      id="experience"
       title="Experience"
       intro="My professional journey and key achievements"
     >
