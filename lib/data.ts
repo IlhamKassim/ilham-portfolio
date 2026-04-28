@@ -1,8 +1,8 @@
 export const profile = {
   name: 'Mohammad Ilham bin Kassim',
   headline:
-    'Computer Engineering Student @ Penn State | AI & Systems Programming | Leadership & Innovation',
-  role: 'Computer Engineering @ Penn State | AI & Systems Programming | Leadership & Innovation',
+    'Computer Engineering Senior @ Penn State | MARA YTP Scholar | Data Structures & Algorithms | AI & Systems Programming | Leadership & Innovation',
+  role: 'Computer Engineering Senior @ Penn State | MARA YTP Scholar | Data Structures & Algorithms | AI & Systems Programming | Leadership & Innovation',
   tagline:
     'Building human-centered systems, data-driven products, and inclusive programs.',
   location: 'State College, PA, USA',
@@ -20,14 +20,17 @@ export const profile = {
     'Python',
     'Java',
     'C',
+    'JavaScript',
+    'CSS',
+    'WebGL',
     'Systems Programming',
     'AI/ML',
     'Predictive Modeling',
+    'Machine Learning',
+    'Data Analysis',
     'Microsoft 365',
     'Leadership',
     'Technical Writing',
-    'Data Analysis',
-    'Machine Learning',
     'Project Management',
     'Team Leadership',
     'Problem Solving',
@@ -81,17 +84,27 @@ export const profile = {
     },
     {
       school: 'MARA Junior Science College (MRSM)',
-      credential: 'High School Diploma',
-      dates: '2016 – 2021',
+      credential:
+        'High School Diploma, Sijil Pelajaran Malaysia / Malaysia Certificate of Education',
+      dates: 'Mar 2016 – Mar 2021',
       details: [],
     },
   ],
 
   experiences: [
     {
+      role: 'Board Transition Committee Member',
+      org: 'Penn State University',
+      dates: 'Jun 2025 – Jun 2025',
+      bullets: [
+        'Selected as a student representative to advise the incoming Board of Trustees/Executive Board on strategic planning and organizational continuity for the 2026–2027 term.',
+      ],
+      tech: ['Strategic Planning', 'Governance', 'Leadership'],
+    },
+    {
       role: 'Part-Time Development Specialist',
       org: 'Penn State Division of Development & Alumni Relations (DDAR)',
-      dates: 'Aug 2025 – Present',
+      dates: 'Apr 2025 – Present',
       bullets: [
         'Advanced inclusive fundraising strategy with equity-centered prospect segmentation, increasing donor diversity by 25%',
         'Curated multi-year talent pipeline database for 500+ internship alumni, improving prospect tracking efficiency by 40%',
@@ -109,7 +122,7 @@ export const profile = {
     {
       role: 'NSO Frontline',
       org: 'Student Orientation & Transition Programs, Penn State',
-      dates: 'Mar 2025 – Present',
+      dates: 'Mar 2025 – Aug 2025',
       bullets: [
         'Served as primary point of contact for 8,000+ new students and families across phone/email/in-person channels',
         'Built quick-response scripts reducing call handling time by 40% and improving customer satisfaction scores',
@@ -123,6 +136,17 @@ export const profile = {
         'Communication',
         'Problem Solving',
       ],
+    },
+    {
+      role: 'Orientation Leader',
+      org: 'Penn State University',
+      dates: 'Mar 2025 – Apr 2025',
+      bullets: [
+        'Collaborated with fellow leaders to organize and execute large-scale events including campus tours and team-building exercises.',
+        'Served as a peer mentor, helping new students navigate academic, social, and extracurricular opportunities.',
+        'Promoted diversity, equity, inclusion, and school spirit while gathering feedback to improve future orientation programs.',
+      ],
+      tech: ['Event Planning', 'Mentorship', 'Communication', 'DEI'],
     },
     {
       role: 'Online Program Moderator / Technical Assistant',
@@ -143,22 +167,16 @@ export const profile = {
       ],
     },
     {
-      role: 'DEIB Intern',
-      org: 'Penn State DDAR — Office of DEIB',
-      dates: 'Apr 2025 – Aug 2025',
+      role: 'Smeal Business Core Proctor',
+      org: 'Smeal College of Business, Penn State',
+      dates: 'Feb 2025 – Apr 2025',
       bullets: [
-        'Launched Staff Advisory Council with 20+ members, authoring charter and aligning governance with university standards',
-        'Co-designed ERG succession planning framework with executive sponsorship model, improving leadership continuity',
-        'Developed diversity metrics dashboard, increasing transparency and accountability in DEIB initiatives by 45%',
-        'Organized 8+ inclusive events reaching 300+ staff members, fostering workplace belonging and engagement',
+        'Maintained the integrity of Smeal Business Core examinations by overseeing test administration and enforcing strict exam policies.',
+        'Verified student identification and actively monitored exam rooms to ensure a secure testing environment and prevent academic dishonesty.',
+        'Handled and securely transported confidential test materials, strictly adhering to established academic protocols.',
+        'Communicated clear instructions to students and reported testing irregularities to uphold university academic standards.',
       ],
-      tech: [
-        'Project Management',
-        'Data Visualization',
-        'Event Planning',
-        'Leadership Development',
-        'Policy Development',
-      ],
+      tech: ['Academic Integrity', 'Communication', 'Attention to Detail'],
     },
     {
       role: 'Part-Time Research Support',
@@ -177,6 +195,94 @@ export const profile = {
         'Laboratory Techniques',
         'Documentation',
       ],
+    },
+    {
+      role: 'Common Desk Team Member',
+      org: 'Penn State University',
+      dates: 'May 2024 – Dec 2024',
+      bullets: [
+        'Provided front-desk support and customer service for the Penn State campus community.',
+      ],
+      tech: ['Customer Service', 'Communication'],
+    },
+    {
+      role: 'EduSpark Bootcamp Participant',
+      org: 'FutureLab.my',
+      dates: 'Jun 2024 – Jul 2024',
+      bullets: [
+        'Participated in a rigorous social enterprise bootcamp featuring workshops and a two-week mentorship focused on startup development.',
+        'Co-developed a marketplace platform concept to help local artisans from Borneo sell their products, earning 3rd place in the final pitch competition.',
+        'Secured a paid mentorship opportunity with FutureLab based on the success of the startup pitch.',
+      ],
+      tech: [
+        'Entrepreneurship',
+        'Social Enterprise',
+        'Startup Development',
+        'Pitching',
+      ],
+    },
+    {
+      role: 'National Training Week Program',
+      org: 'NTW Malaysia',
+      dates: 'Jun 2024 – Jun 2024',
+      bullets: [
+        'Completed comprehensive coursework in "Artificial Intelligence From Scratch" and "Foundation in Artificial Intelligence".',
+        'Gained foundational knowledge in machine learning, neural networks, deep learning (CNNs, RNNs), and Natural Language Processing (NLP).',
+        'Learned to utilize AI tools to accelerate personal and professional learning processes for Small and Medium Enterprises (SMEs).',
+      ],
+      tech: ['Machine Learning', 'Neural Networks', 'NLP', 'Deep Learning'],
+    },
+    {
+      role: 'Google Developer Student Club Member',
+      org: 'Penn State GDSC',
+      dates: 'Aug 2023 – Mar 2025',
+      bullets: [
+        'Participated in technical and professional development workshops focused on project management, resume building, and startup creation.',
+        'Networked directly with Google representatives during exclusive club events to gain insights into the tech industry.',
+        'Engaged with a community of computer science students to build foundational skills required for tech careers.',
+      ],
+      tech: ['Project Management', 'Networking', 'Professional Development'],
+    },
+    {
+      role: 'Vice President, External Affairs',
+      org: 'Penn State Malaysian Students Club',
+      dates: 'Aug 2023 – Aug 2024',
+      bullets: [
+        'Led a team of 20+ members to ensure smooth operations and strong organizational structure for the 150-member organization.',
+        'Planned and coordinated major cultural events, including the Independence Day Celebration, Game Night, and Malaysian Cultural Night.',
+        'Spearheaded external outreach, building strategic connections with other university clubs and organizations to facilitate collaborative activities.',
+      ],
+      tech: [
+        'Leadership',
+        'Event Planning',
+        'External Relations',
+        'Team Management',
+      ],
+    },
+    {
+      role: 'Logistics Director — MCN Committee',
+      org: 'Penn State University',
+      dates: 'Jan 2023 – Jan 2024',
+      bullets: [
+        'Served as Logistics Director for the annual Malaysian Cultural Night, successfully organizing an event with over 200 attendees to promote cultural heritage.',
+        'Established direct partnerships with the Malaysian Embassy in Washington D.C. to secure authentic cultural items and logistical support for the event.',
+        'Coordinated end-to-end event logistics to ensure a seamless experience for performers, committee members, and guests.',
+      ],
+      tech: [
+        'Event Management',
+        'Logistics',
+        'Partnership Development',
+        'Cultural Programming',
+      ],
+    },
+    {
+      role: 'Dining Worker',
+      org: 'Penn State University',
+      dates: 'Nov 2022 – Jul 2023',
+      bullets: [
+        'Supported dining hall operations including food preparation, service, and maintaining a clean, safe environment.',
+      ],
+      tech: ['Customer Service', 'Food Service', 'Teamwork'],
     },
   ],
 
