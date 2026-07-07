@@ -36,17 +36,6 @@ export default function ResumePage() {
               </Button>
             </div>
           </div>
-
-          <div className="mt-12 rounded-lg bg-muted/50 p-6">
-            <p className="text-sm text-muted-foreground">
-              <strong>Note:</strong> This is a placeholder resume file. Please
-              replace{' '}
-              <code className="rounded bg-muted px-2 py-1 text-xs">
-                /public/Ilham_Resume.pdf
-              </code>{' '}
-              with the actual resume file.
-            </p>
-          </div>
         </div>
       </div>
     </div>

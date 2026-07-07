@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const defaultMetadata: Metadata = {
-  metadataBase: new URL('https://ilham-portfolio-three.vercel.app'),
+  metadataBase: new URL('https://ilham-portfolio-yl2x.vercel.app'),
   title: 'Mohammad Ilham bin Kassim | Computer Engineering Student',
   description:
     'Computer Engineering student at Penn State University specializing in AI & Systems Programming, Leadership & Innovation. Building human-centered systems and data-driven products.',
@@ -19,7 +19,7 @@ export const defaultMetadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ilham-portfolio-three.vercel.app',
+    url: 'https://ilham-portfolio-yl2x.vercel.app',
     title: 'Mohammad Ilham bin Kassim | Computer Engineering Student',
     description:
       'Computer Engineering student at Penn State University specializing in AI & Systems Programming, Leadership & Innovation.',

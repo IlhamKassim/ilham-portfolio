@@ -11,7 +11,16 @@ export default function Skills() {
       title="Skills"
       intro="Technologies and competencies I work with"
     >
-      <BadgeList items={profile.skills} />
+      <div className="space-y-10">
+        {profile.skillCategories.map((group) => (
+          <div key={group.category}>
+            <h3 className="mb-4 text-center text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+              {group.category}
+            </h3>
+            <BadgeList items={group.items} />
+          </div>
+        ))}
+      </div>
     </Section>
   )
 }

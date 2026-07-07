@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import { defaultMetadata } from '@/lib/seo'
 import Header from '@/components/Header'
@@ -28,7 +29,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: profile.name,
-              jobTitle: profile.headline,
+              jobTitle: profile.role,
               email: profile.email,
               telephone: profile.phone,
               address: {
@@ -37,7 +38,7 @@ export default function RootLayout({
                 addressRegion: 'PA',
                 addressCountry: 'USA',
               },
-              url: 'https://ilham-portfolio-three.vercel.app',
+              url: 'https://ilham-portfolio-yl2x.vercel.app',
               sameAs: [profile.linkedin, profile.github],
               description: profile.tagline,
             }),
@@ -56,6 +57,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )

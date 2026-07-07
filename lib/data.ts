@@ -1,14 +1,14 @@
 export const profile = {
   name: 'Mohammad Ilham bin Kassim',
   headline:
-    'Computer Engineering Senior @ Penn State | MARA YTP Scholar | Data Structures & Algorithms | AI & Systems Programming | Leadership & Innovation',
-  role: 'Computer Engineering Senior @ Penn State | MARA YTP Scholar | Data Structures & Algorithms | AI & Systems Programming | Leadership & Innovation',
+    "I'm finishing my Computer Engineering degree at Penn State — I build AI and systems projects, and lead a few student organizations too.",
+  role: 'Computer Engineering Student',
   tagline:
     'Building human-centered systems, data-driven products, and inclusive programs.',
   location: 'State College, PA, USA',
   avatar: '/avatar.jpg',
   email: 'ilhamkassim2003@gmail.com',
-  phone: '(814) 441-4137',
+  phone: '+60 17-528 4805',
   linkedin: 'https://www.linkedin.com/in/ilhamkassim',
   github: 'https://github.com/IlhamKassim',
   graduation: 'May 2026',
@@ -16,52 +16,105 @@ export const profile = {
   languages: ['English (Native/Bilingual)', 'Malay (Native/Bilingual)'],
   openTo: ['Internships', 'Entry-level roles', 'Summer 2026'],
 
-  skills: [
-    'Python',
-    'Java',
-    'C',
-    'JavaScript',
-    'CSS',
-    'WebGL',
-    'Systems Programming',
-    'AI/ML',
-    'Predictive Modeling',
-    'Machine Learning',
-    'Data Analysis',
-    'Microsoft 365',
-    'Leadership',
-    'Technical Writing',
-    'Project Management',
-    'Team Leadership',
-    'Problem Solving',
-    'Communication',
+  skillCategories: [
+    {
+      category: 'Languages & Frameworks',
+      items: [
+        'Python',
+        'Java',
+        'C++',
+        'JavaScript',
+        'TypeScript',
+        'HTML5 & CSS',
+        'React.js',
+        'Next.js',
+        'FastAPI',
+        'Tailwind CSS',
+        'Pandas',
+        'Scikit-Learn',
+      ],
+    },
+    {
+      category: 'Systems & AI',
+      items: [
+        'Operating Systems',
+        'Multithreading & Process Scheduling',
+        'Data Structures & Algorithms',
+        'System Architecture',
+        'Machine Learning',
+        'Prompt Engineering',
+        'Predictive Modeling',
+        'Database Design',
+        'Gemini API',
+        'Alpaca API',
+        'Google Search API',
+      ],
+    },
+    {
+      category: 'Leadership & Operations',
+      items: [
+        'Team Leadership',
+        'Project Management',
+        'Event Management',
+        'Stakeholder Engagement',
+        'Diversity, Equity & Inclusion',
+        'Mentoring',
+        'Public & Foreign Affairs',
+        'Strategic Communications',
+      ],
+    },
   ],
 
   certifications: [
     {
       name: 'Customer Service Foundations',
       issuer: 'LinkedIn Learning',
-      date: '2024-01',
+      date: '2025-03',
+    },
+    {
+      name: 'Idea TestLab',
+      issuer: 'Canvas Credentials (Badgr)',
+      date: '2025-05',
     },
     {
       name: 'Introduction to Prompt Engineering for Generative AI',
       issuer: 'LinkedIn Learning',
-      date: '2024-02',
+      date: '2025-06',
     },
     {
       name: 'Artificial Intelligence Foundations: Machine Learning',
       issuer: 'LinkedIn Learning',
-      date: '2024-03',
+      date: '2025-06',
     },
     {
       name: 'Entrepreneurship Foundations',
       issuer: 'LinkedIn Learning',
-      date: '2024-04',
+      date: '2025-06',
     },
     {
       name: 'Introduction to Web Design and Development',
       issuer: 'LinkedIn Learning',
-      date: '2024-05',
+      date: '2025-07',
+    },
+    {
+      name: 'Business Analysis Foundations',
+      issuer: 'LinkedIn Learning',
+      date: '2025-07',
+    },
+    {
+      name: 'Creating Your Personal Brand',
+      issuer: 'LinkedIn Learning',
+      date: '2025-07',
+    },
+    {
+      name: 'Learning GitHub',
+      issuer: 'LinkedIn Learning',
+      date: '2025-08',
+    },
+    {
+      name: 'Learning Factory Capstone Onboarding',
+      issuer: 'Penn State College of Engineering',
+      date: '2026-01',
     },
   ],
 
@@ -102,14 +155,13 @@ export const profile = {
       tech: ['Strategic Planning', 'Governance', 'Leadership'],
     },
     {
-      role: 'Part-Time Development Specialist',
-      org: 'Penn State Division of Development & Alumni Relations (DDAR)',
-      dates: 'Apr 2025 – Present',
+      role: 'DDAR Internship',
+      org: 'Penn State University – Division of Development and Alumni Relations',
+      dates: 'Apr 2025 – Jul 2026',
       bullets: [
-        'Advanced inclusive fundraising strategy with equity-centered prospect segmentation, increasing donor diversity by 25%',
-        'Curated multi-year talent pipeline database for 500+ internship alumni, improving prospect tracking efficiency by 40%',
-        'Evaluated genAI and predictive modeling tools, delivering comprehensive briefs and pilot roadmaps to VP for DDAR',
-        'Streamlined prospect research processes, reducing manual data collection time by 60% through automation',
+        'AI Evaluation: Evaluated generative AI and predictive modeling tools to accelerate fundraising goals, delivering pilot-project roadmaps to Division leaders.',
+        'Data Integrity: Audited AWA-to-Salesforce CRM migration, ensuring no high-value prospect records were lost during transition.',
+        'Recruitment: Screened 100+ applicants and interviewed 15 candidates to select the 2026 intern cohort, managing the full recruitment lifecycle.',
       ],
       tech: [
         'Python',
@@ -127,7 +179,7 @@ export const profile = {
         'Served as primary point of contact for 8,000+ new students and families across phone/email/in-person channels',
         'Built quick-response scripts reducing call handling time by 40% and improving customer satisfaction scores',
         'Coordinated orientation logistics for 2,000+ incoming students, ensuring 99% successful program completion rate',
-        'Mentored 15+ student volunteers, improving team efficiency and reducing response time by 30%',
+        'Mentored 5 student volunteers, improving team efficiency and reducing response time by 30%',
       ],
       tech: [
         'Customer Service',
@@ -150,13 +202,11 @@ export const profile = {
     },
     {
       role: 'Online Program Moderator / Technical Assistant',
-      org: 'Smeal College of Business, Executive Education',
-      dates: 'Feb 2025 – Present',
+      org: 'Penn State University – Smeal College of Business',
+      dates: 'Feb 2025 – Jul 2026',
       bullets: [
-        'Facilitated 20+ live executive education sessions with 99% uptime across Zoom/Teams platforms',
-        'Provided real-time technical support for 500+ executive participants, maintaining 100% session completion rate',
-        'Streamlined technical setup processes, reducing pre-session preparation time by 50%',
-        'Collaborated with faculty to optimize virtual learning experiences, increasing participant engagement by 35%',
+        'Technical Operations: Managed technical delivery for 6+ live sessions per week, supporting 20 senior leaders per session across supply chain and business disciplines.',
+        'Real-Time Support: Configured virtual breakout rooms and resolved software issues in real time using Zoom and Microsoft Teams to ensure uninterrupted delivery.',
       ],
       tech: [
         'Zoom',
@@ -185,8 +235,8 @@ export const profile = {
       bullets: [
         'Supported applied research in nutrition, management, and welfare, collecting and analyzing 1,000+ data samples',
         'Maintained 99% data accuracy rate through meticulous sample collection and documentation processes',
-        'Assisted in research publication preparation, contributing to 2 peer-reviewed journal articles',
-        'Optimized data collection workflows, reducing processing time by 25% through improved methodologies',
+        "Assisted in research publication preparation for the lab's ongoing studies",
+        'Optimized data collection workflows through improved methodologies',
       ],
       tech: [
         'Data Analysis',
@@ -248,7 +298,7 @@ export const profile = {
       org: 'Penn State Malaysian Students Club',
       dates: 'Aug 2023 – Aug 2024',
       bullets: [
-        'Led a team of 20+ members to ensure smooth operations and strong organizational structure for the 150-member organization.',
+        'Co-led a team of 20+ members to ensure smooth operations and strong organizational structure for the 200+-member organization.',
         'Planned and coordinated major cultural events, including the Independence Day Celebration, Game Night, and Malaysian Cultural Night.',
         'Spearheaded external outreach, building strategic connections with other university clubs and organizations to facilitate collaborative activities.',
       ],
@@ -258,6 +308,17 @@ export const profile = {
         'External Relations',
         'Team Management',
       ],
+    },
+    {
+      role: 'Founding Member & Operational Director',
+      org: 'The Borneo, Penn State University',
+      dates: 'Apr 2023 – Present',
+      bullets: [
+        'Co-founded The Borneo, a Penn State student organization promoting the cultural heritage of Sabah, Sarawak, and Kalimantan.',
+        "Served as the organization's first Operational Director, leading negotiations with peer clubs and establishing efficient operational workflows.",
+        'Authored the club constitution and led its official registration with Pennsylvania State University.',
+      ],
+      tech: ['Organizational Leadership', 'Governance', 'Cultural Programming'],
     },
     {
       role: 'Logistics Director — MCN Committee',
@@ -288,9 +349,92 @@ export const profile = {
 
   projects: [
     {
+      title: 'Reber Building Virtual Tour',
+      description:
+        'Lead Developer for a web-based interactive showcase and 360° virtual tour of the redesigned Mechanical Engineering hallway in the Reber Building, built for the Kinetic Engineering Collective capstone. Features a Penn State-branded SPA dashboard, a Pannellum-powered multi-scene panoramic viewer, and an animated budget tracker.',
+      link: 'https://ilhamkassim.github.io/showcase-website/',
+      tech: ['Next.js', 'React', 'Pannellum', 'SPA', 'WebGL'],
+      featured: true,
+      image: '/projects/reber-building.jpg',
+    },
+    {
+      title: 'Shariah Algo Trader',
+      description:
+        'Engineered a quantitative trading bot on a $100K paper portfolio via the Alpaca API, operating exclusively within a Shariah-compliant equity universe and outperforming the S&P 500 by 2.5% and the SPUS ETF by 5% within the first week. Built a FastAPI backend and React/TypeScript dashboard for real-time portfolio, compliance, and factor-ranking visibility, with a pytest-covered test suite.',
+      link: 'https://shariah-algo-trader.onrender.com',
+      tech: [
+        'Python',
+        'FastAPI',
+        'Alpaca API',
+        'React',
+        'TypeScript',
+        'Quantitative Investing',
+      ],
+      featured: true,
+      image: '/projects/shariah-algo-trader.jpg',
+    },
+    {
+      title: 'Social Nutrition Label',
+      description:
+        'A Chrome Extension that uses the Gemini API to analyze social media post credibility, factual alignment, and visual integrity to combat misinformation.',
+      link: 'https://github.com/IlhamKassim/laila-coders',
+      tech: ['Gemini API', 'Chrome Extension', 'JavaScript', 'AI/ML'],
+      featured: true,
+    },
+    {
+      title: 'Computer Architecture Design Space Explorer',
+      description:
+        'A C++ simulation framework that automates Design Space Exploration for processor microarchitecture, evaluating up to 1,000 distinct processor and cache configurations per run. Includes a heuristic search algorithm across an 18-dimensional design space, optimizing for execution time or Energy Delay Product while enforcing cache hierarchy constraints.',
+      link: 'https://github.com/IlhamKassim/cpu-architecture-dse',
+      tech: ['C++', 'Computer Architecture', 'Shell Scripting'],
+      featured: true,
+    },
+    {
+      title: 'Qwen Shariah Autopilot',
+      description:
+        'Global AI Hackathon Series submission built on Qwen Cloud, extending Shariah-compliant algorithmic trading with an AI-driven autopilot layer.',
+      link: 'https://github.com/IlhamKassim/qwen-shariah-autopilot',
+      tech: ['Qwen', 'AI/ML', 'Algorithmic Trading'],
+    },
+    {
+      title: 'Thread Scheduler — Operating Systems',
+      description:
+        'A multithreaded CPU thread scheduler supporting FCFS, SRTF, and MLFQ scheduling policies using pthreads, replicating real-life CPU and I/O timing to generate Gantt chart outputs for thread execution.',
+      link: '#',
+      tech: ['C++', 'Pthreads', 'Operating Systems', 'Process Scheduling'],
+    },
+    {
+      title: 'Personal Portfolio Website',
+      description:
+        'This site — a responsive personal portfolio built with Next.js App Router, TypeScript, and Tailwind CSS, featuring dark mode, Framer Motion animations, and SEO-optimized metadata.',
+      link: 'https://github.com/IlhamKassim/ilham-portfolio',
+      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'Framer Motion'],
+    },
+    {
+      title: 'MyInvois Middleware',
+      description:
+        'Automated LHDN MyInvois middleware for social commerce, streamlining e-invoicing compliance for small merchants.',
+      link: 'https://github.com/IlhamKassim/myinvois',
+      tech: ['Express', 'Prisma', 'BullMQ', 'Redis'],
+    },
+    {
+      title: 'AI Resume Builder',
+      description:
+        'Built an AI-powered resume tailoring pipeline using the Claude API with Zod-validated schemas to guarantee structured, ATS-safe output. Engineered as a Next.js 16 App Router application with a Vitest test suite covering prompt construction, schema validation, and error handling.',
+      link: 'https://github.com/IlhamKassim/resume-builder',
+      tech: ['Next.js', 'TypeScript', 'Anthropic API', 'Zod', 'Vitest'],
+    },
+    {
+      title: 'Skincare Storefront',
+      description:
+        'A curated skincare routine builder and storefront, helping users assemble a personalized routine and shop for it in one flow.',
+      link: 'https://github.com/IlhamKassim/skincare-storefront',
+      tech: ['Next.js', 'Supabase', 'Framer Motion'],
+    },
+    {
       title: 'MLBB Predictive Analysis MVP',
       description:
-        'Built analytics MVP for esports coaching with Python data pipelines and machine learning models, achieving 85% prediction accuracy for player performance.',
+        'Analytics MVP for esports coaching, built with Python data pipelines and machine learning models to surface player performance insights.',
       link: 'https://github.com/IlhamKassim/mlbb-predictive-analysis-mvp',
       tech: [
         'Python',
@@ -303,34 +447,21 @@ export const profile = {
     {
       title: 'AI in Fundraising Briefs',
       description:
-        'Conducted comprehensive research on generative AI and predictive modeling for higher-ed fundraising, delivering actionable insights to university leadership.',
-      link: 'https://github.com/IlhamKassim/ai-fundraising-research',
-      tech: [
-        'Research',
-        'Data Analysis',
-        'AI/ML',
-        'Technical Writing',
-        'Presentation',
-      ],
+        'Research on generative AI and predictive modeling for higher-ed fundraising, delivering actionable insights and pilot-project roadmaps to university leadership.',
+      link: '#',
+      tech: ['Research', 'Data Analysis', 'AI/ML', 'Technical Writing'],
     },
     {
       title: 'EduSpark Marketplace (Bootcamp)',
       description:
-        'Developed prototype marketplace for local Borneo artisans during social enterprise bootcamp, focusing on sustainable economic development.',
-      link: 'https://github.com/IlhamKassim/eduspark-marketplace',
+        'Prototype marketplace concept for local Borneo artisans, co-developed during a social enterprise bootcamp focused on sustainable economic development.',
+      link: '#',
       tech: [
         'Web Development',
         'Social Enterprise',
         'Project Management',
         'Community Development',
       ],
-    },
-    {
-      title: 'Portfolio Website',
-      description:
-        'Built responsive portfolio website using Next.js 14, TypeScript, and Tailwind CSS, featuring modern design and optimal performance.',
-      link: 'https://github.com/IlhamKassim/ilham-portfolio',
-      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'Framer Motion'],
     },
   ],
 }
