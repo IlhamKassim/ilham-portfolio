@@ -1,9 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
 import { Badge } from '@/components/ui/badge'
+import { useScrollReveal, reveal } from '@/lib/scroll-reveal'
 
 interface BadgeListProps {
   items: string[]
@@ -14,19 +13,18 @@ export default function BadgeList({
   items,
   variant = 'default',
 }: BadgeListProps) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const { ref, isInView, reducedMotion } = useScrollReveal()
 
   return (
     <div ref={ref} className="flex flex-wrap justify-center gap-3">
       {items.map((item, index) => (
         <motion.div
           key={index}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={
-            isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
-          }
-          transition={{ duration: 0.4, delay: index * 0.05 }}
+          {...reveal(
+            isInView,
+            { direction: 'scale', distance: 0.8, duration: 0.4, delay: index * 0.05 },
+            reducedMotion
+          )}
         >
           <Badge
             variant={variant}

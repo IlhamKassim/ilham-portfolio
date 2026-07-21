@@ -1,8 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
 import Image from 'next/image'
 import {
   Card,
@@ -14,6 +12,7 @@ import {
 import { ExternalLink, Github } from 'lucide-react'
 import Section from './Section'
 import { profile } from '@/lib/data'
+import { useScrollReveal, reveal } from '@/lib/scroll-reveal'
 
 function ProjectLink({
   link,
@@ -57,8 +56,7 @@ function TechTags({ tech }: { tech?: string[] }) {
 }
 
 export default function Projects() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const { ref, isInView, reducedMotion } = useScrollReveal()
 
   const featured = profile.projects.filter((p) => p.featured)
   const rest = profile.projects.filter((p) => !p.featured)
@@ -73,9 +71,7 @@ export default function Projects() {
         {featured.map((project, index) => (
           <motion.div
             key={project.title}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            {...reveal(isInView, { delay: index * 0.1 }, reducedMotion)}
           >
             <Card className="group h-full overflow-hidden transition-all duration-300 hover:shadow-lg">
               {project.image && (
@@ -117,11 +113,7 @@ export default function Projects() {
             {rest.map((project, index) => (
               <motion.div
                 key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                }
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                {...reveal(isInView, { delay: index * 0.05 }, reducedMotion)}
               >
                 <Card className="group h-full transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   <CardHeader>

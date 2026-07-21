@@ -1,16 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Mail, Phone, MapPin, Linkedin, Download, Github } from 'lucide-react'
 import { profile } from '@/lib/data'
+import { useScrollReveal, reveal } from '@/lib/scroll-reveal'
 
 export default function Hero() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const { ref, isInView, reducedMotion } = useScrollReveal()
 
   return (
     <section
@@ -20,18 +18,16 @@ export default function Hero() {
     >
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}
+          {...reveal(isInView, { distance: 30, duration: 0.8 }, reducedMotion)}
           className="mx-auto max-w-4xl text-center"
         >
           {/* Profile Image */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={
-              isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }
-            }
-            transition={{ duration: 0.8, delay: 0.2 }}
+            {...reveal(
+              isInView,
+              { direction: 'scale', distance: 0.8, duration: 0.8, delay: 0.2 },
+              reducedMotion
+            )}
             className="mb-8"
           >
             <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-primary/20">
@@ -48,27 +44,21 @@ export default function Hero() {
 
           {/* Name and Role */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            {...reveal(isInView, { duration: 0.8, delay: 0.4 }, reducedMotion)}
             className="mb-4 text-4xl font-bold md:text-6xl"
           >
             {profile.name}
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            {...reveal(isInView, { duration: 0.8, delay: 0.6 }, reducedMotion)}
             className="mb-6 text-xl text-muted-foreground md:text-2xl"
           >
             {profile.headline}
           </motion.p>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            {...reveal(isInView, { duration: 0.8, delay: 0.8 }, reducedMotion)}
             className="mx-auto mb-6 max-w-3xl text-lg text-muted-foreground"
           >
             {profile.tagline}
@@ -77,9 +67,7 @@ export default function Hero() {
           {/* Open to section */}
           {profile.openTo && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
+              {...reveal(isInView, { duration: 0.8, delay: 1.0 }, reducedMotion)}
               className="mx-auto mb-12 max-w-2xl"
             >
               <p className="text-sm text-muted-foreground">
@@ -91,9 +79,7 @@ export default function Hero() {
 
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
+            {...reveal(isInView, { duration: 0.8, delay: 1.0 }, reducedMotion)}
             className="mb-12 flex flex-wrap justify-center gap-4"
           >
             <div className="flex items-center space-x-2 text-muted-foreground">
@@ -130,9 +116,7 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            {...reveal(isInView, { duration: 0.8, delay: 1.2 }, reducedMotion)}
             className="flex flex-col justify-center gap-4 sm:flex-row"
           >
             <Button size="lg" className="flex items-center space-x-2" asChild>

@@ -1,16 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Globe } from 'lucide-react'
 import Section from './Section'
 import { profile } from '@/lib/data'
+import { useScrollReveal, reveal } from '@/lib/scroll-reveal'
 
 export default function Languages() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const { ref, isInView, reducedMotion } = useScrollReveal()
 
   return (
     <Section
@@ -19,11 +17,7 @@ export default function Languages() {
       intro="Languages I speak and write"
     >
       <div ref={ref} className="mx-auto max-w-2xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
-        >
+        <motion.div {...reveal(isInView, {}, reducedMotion)}>
           <Card>
             <CardContent className="p-6">
               <div className="mb-4 flex items-center space-x-3">
@@ -36,11 +30,16 @@ export default function Languages() {
                 {profile.languages.map((language, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={
-                      isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
-                    }
-                    transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
+                    {...reveal(
+                      isInView,
+                      {
+                        direction: 'x',
+                        distance: -20,
+                        duration: 0.4,
+                        delay: 0.2 + index * 0.1,
+                      },
+                      reducedMotion
+                    )}
                     className="flex items-center justify-between rounded-lg bg-muted/50 p-3"
                   >
                     <span className="font-medium text-foreground">

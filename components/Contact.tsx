@@ -1,17 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Mail, Phone, Linkedin, MapPin } from 'lucide-react'
 import Section from './Section'
 import { profile } from '@/lib/data'
+import { useScrollReveal, reveal } from '@/lib/scroll-reveal'
 
 export default function Contact() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const { ref, isInView, reducedMotion } = useScrollReveal()
 
   const contactMethods = [
     {
@@ -52,17 +50,13 @@ export default function Contact() {
     >
       <div ref={ref} className="mx-auto max-w-4xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
+          {...reveal(isInView, {}, reducedMotion)}
           className="grid gap-6 md:grid-cols-2"
         >
           {contactMethods.map((method, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              {...reveal(isInView, { delay: index * 0.1 }, reducedMotion)}
             >
               <Card className="h-full transition-shadow hover:shadow-md">
                 <CardContent className="p-6">
@@ -114,9 +108,7 @@ export default function Contact() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          {...reveal(isInView, { delay: 0.4 }, reducedMotion)}
           className="mt-12 text-center"
         >
           <Card>

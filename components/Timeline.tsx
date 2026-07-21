@@ -1,8 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useScrollReveal, reveal } from '@/lib/scroll-reveal'
 
 interface TimelineItem {
   role: string
@@ -17,8 +16,7 @@ interface TimelineProps {
 }
 
 export default function Timeline({ items }: TimelineProps) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const { ref, isInView, reducedMotion } = useScrollReveal()
 
   return (
     <div ref={ref} className="relative">
@@ -29,13 +27,15 @@ export default function Timeline({ items }: TimelineProps) {
         {items.map((item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-            animate={
-              isInView
-                ? { opacity: 1, x: 0 }
-                : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }
-            }
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            {...reveal(
+              isInView,
+              {
+                direction: 'x',
+                distance: index % 2 === 0 ? -50 : 50,
+                delay: index * 0.1,
+              },
+              reducedMotion
+            )}
             className={`relative flex items-center ${
               index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
             }`}
