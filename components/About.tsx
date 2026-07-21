@@ -7,17 +7,23 @@ export default function About() {
     <Section id="about" title="About Me" intro="Get to know me better">
       <div className="prose prose-lg max-w-none text-center">
         <p className="leading-relaxed text-muted-foreground">
-          I like building things that make life a little easier to navigate.
-          As a Computer Engineering senior at Penn State, I&apos;m most drawn
-          to where technical systems meet community needs — from managing
-          technical operations for university programs to experimenting with
-          AI-powered tools, like a Chrome extension that helps people spot
-          misinformation on social media. Outside of code, I lead
-          community-focused initiatives — from co-founding a cultural
-          organization to serving on university governance — that bring
-          people together and drive real impact. I&apos;m always happy to
-          connect with anyone interested in AI, international education, or
-          navigating life as an international student.
+          The pattern across my work is the same whether I&apos;m writing
+          code or running a meeting: take something confusing — an AI
+          model&apos;s black box, a donor database mid-migration, a club with
+          no constitution yet — and make it legible enough for other people
+          to trust and use. That&apos;s shown up as a Chrome extension that
+          uses the Gemini API to help people spot misinformation on social
+          media, an audit of Penn State&apos;s alumni-relations CRM migration
+          that made sure no high-value prospect records got lost in the
+          process, and the constitution I wrote and registered to get a new
+          Penn State student organization officially recognized. I&apos;m a
+          Computer Engineering senior at Penn State, graduating May 2026, and
+          I&apos;m looking for internship and entry-level roles where I can
+          keep doing that kind of work — in AI, in systems, wherever
+          technical judgment and people judgment both matter. If
+          you&apos;re working through something similar — an ambiguous
+          technical problem, or life as an international student far from
+          home — I&apos;d like to hear from you.
         </p>
       </div>
     </Section>

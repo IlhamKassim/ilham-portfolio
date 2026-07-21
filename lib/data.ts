@@ -1,10 +1,10 @@
 export const profile = {
   name: 'Mohammad Ilham bin Kassim',
   headline:
-    "I'm finishing my Computer Engineering degree at Penn State — I build AI and systems projects, and lead a few student organizations too.",
+    "I build AI tools and systems software — and I co-founded and govern a Penn State student organization from its constitution up.",
   role: 'Computer Engineering Student',
   tagline:
-    'Building human-centered systems, data-driven products, and inclusive programs.',
+    'Recent work: a Chrome extension that flags social media misinformation, and a trading algorithm that beat the S&P 500 by 2.5% in its first week.',
   location: 'State College, PA, USA',
   avatar: '/avatar.jpg',
   email: 'ilhamkassim2003@gmail.com',

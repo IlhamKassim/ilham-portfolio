@@ -20,6 +20,10 @@ _Avoid_: using any number in a bullet that isn't a Verified Metric — see Flagg
 A named group (e.g. "Languages & Frameworks," "Systems & AI," "Leadership & Operations") that Skills are organized under on the site, so recruiters can scan for technical fit while general visitors still see leadership breadth. Distinct from raw LinkedIn skill endorsements — categories are a curated, opinionated subset, not an exhaustive list.
 _Avoid_: displaying the full ~90-item LinkedIn skill list; Skill Category membership is a deliberate edit, not a mirror of LinkedIn.
 
+**Primary Audience**:
+Recruiters — the reader every wording decision on the site is optimized for first. The site still serves general-public and follower visitors (named in the intro above), but as a secondary constraint: copy shouldn't become dry or jargon-only in service of recruiter-scannability.
+_Avoid_: treating "the audience" as undifferentiated; when a wording choice serves recruiters and general visitors differently, recruiters win.
+
 ## Resolved decisions
 
 - **Metrics audit (2026-07-07)**: every quantified claim in Experience was reviewed against what Ilham could verify. Non-verifiable numbers were removed or rewritten as qualitative impact statements rather than invented figures (e.g. DDAR alumni count corrected to 200+; NSO mentee count corrected to 5; peer-reviewed-article and prep-time-reduction claims dropped from the poultry research and Online Program Moderator roles). This is the reference precedent for how to handle any future unverifiable stat.
