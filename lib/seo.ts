@@ -1,7 +1,8 @@
 import { Metadata } from 'next'
+import { SITE_URL } from './site'
 
 export const defaultMetadata: Metadata = {
-  metadataBase: new URL('https://ilham-portfolio-yl2x.vercel.app'),
+  metadataBase: new URL(SITE_URL),
   title: 'Mohammad Ilham bin Kassim | Computer Engineering Student',
   description:
     'Computer Engineering student at Penn State University specializing in AI & Systems Programming, Leadership & Innovation. Building human-centered systems and data-driven products.',
@@ -19,7 +20,7 @@ export const defaultMetadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ilham-portfolio-yl2x.vercel.app',
+    url: SITE_URL,
     title: 'Mohammad Ilham bin Kassim | Computer Engineering Student',
     description:
       'Computer Engineering student at Penn State University specializing in AI & Systems Programming, Leadership & Innovation.',

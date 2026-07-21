@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import { defaultMetadata } from '@/lib/seo'
+import { SITE_URL } from '@/lib/site'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { profile } from '@/lib/data'
@@ -38,7 +39,7 @@ export default function RootLayout({
                 addressRegion: 'PA',
                 addressCountry: 'USA',
               },
-              url: 'https://ilham-portfolio-yl2x.vercel.app',
+              url: SITE_URL,
               sameAs: [profile.linkedin, profile.github],
               description: profile.tagline,
             }),
