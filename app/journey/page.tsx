@@ -15,12 +15,8 @@ export default function JourneyPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="mx-auto max-w-3xl">
           <h1 className="mb-2 text-4xl font-bold">My Journey</h1>
-          <p className="mb-4 text-muted-foreground">
+          <p className="mb-12 text-muted-foreground">
             From Papar to Penn State.
-          </p>
-          <p className="mb-12 max-w-xl text-xs italic text-muted-foreground">
-            This page uses placeholder photos for now, dropped in to test the
-            layout. Swap them for the real ones whenever you have them ready.
           </p>
 
           <JourneyTimeline />
