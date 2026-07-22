@@ -392,7 +392,7 @@ export const profile = {
     {
       title: 'Qwen Shariah Autopilot',
       description:
-        'Global AI Hackathon Series submission built on Qwen Cloud, extending Shariah-compliant algorithmic trading with an AI-driven autopilot layer.',
+        "Global AI Hackathon Series submission built on Qwen Cloud — adds an autonomous decision layer on top of the Shariah Algo Trader's Shariah-compliant signal engine.",
       link: 'https://github.com/IlhamKassim/qwen-shariah-autopilot',
       tech: ['Qwen', 'AI/ML', 'Algorithmic Trading'],
     },
@@ -413,7 +413,7 @@ export const profile = {
     {
       title: 'MyInvois Middleware',
       description:
-        'Automated LHDN MyInvois middleware for social commerce, streamlining e-invoicing compliance for small merchants.',
+        'Middleware that automates LHDN MyInvois e-invoicing for social-commerce sellers, so small merchants stay compliant without hand-entering every invoice.',
       link: 'https://github.com/IlhamKassim/myinvois',
       tech: ['Express', 'Prisma', 'BullMQ', 'Redis'],
     },
@@ -427,7 +427,7 @@ export const profile = {
     {
       title: 'Skincare Storefront',
       description:
-        'A curated skincare routine builder and storefront, helping users assemble a personalized routine and shop for it in one flow.',
+        'A skincare routine builder and storefront that takes a user from picking products to checkout in one flow, built on Next.js and Supabase.',
       link: 'https://github.com/IlhamKassim/skincare-storefront',
       tech: ['Next.js', 'Supabase', 'Framer Motion'],
     },
@@ -447,14 +447,14 @@ export const profile = {
     {
       title: 'AI in Fundraising Briefs',
       description:
-        'Research on generative AI and predictive modeling for higher-ed fundraising, delivering actionable insights and pilot-project roadmaps to university leadership.',
+        "Evaluation of generative AI and predictive-modeling tools for higher-ed fundraising — the research behind the pilot-project roadmaps delivered to Penn State's Division of Development and Alumni Relations.",
       link: '#',
       tech: ['Research', 'Data Analysis', 'AI/ML', 'Technical Writing'],
     },
     {
       title: 'EduSpark Marketplace (Bootcamp)',
       description:
-        'Prototype marketplace concept for local Borneo artisans, co-developed during a social enterprise bootcamp focused on sustainable economic development.',
+        "Marketplace concept for local Borneo artisans, built during FutureLab.my's social enterprise bootcamp — placed 3rd in the closing pitch competition and earned a paid mentorship offer.",
       link: '#',
       tech: [
         'Web Development',
