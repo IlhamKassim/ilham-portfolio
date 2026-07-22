@@ -2,7 +2,7 @@ export const profile = {
   name: 'Mohammad Ilham bin Kassim',
   headline:
     'I build AI tools and systems software. I also co-founded and govern a Penn State student organization from its constitution up.',
-  role: 'Computer Engineering Student',
+  role: 'Computer Engineering Graduate',
   tagline:
     'Recent work: a Chrome extension that flags social media misinformation, and a trading algorithm that beat the S&P 500 by 2.5% in its first week.',
   location: 'State College, PA, USA',
@@ -14,7 +14,7 @@ export const profile = {
   graduation: 'May 2026',
   gpa: '3.33/4.0',
   languages: ['English (Native/Bilingual)', 'Malay (Native/Bilingual)'],
-  openTo: ['Internships', 'Entry-level roles', 'Summer 2026'],
+  openTo: ['Entry-level roles', 'Full-time opportunities'],
 
   skillCategories: [
     {
@@ -261,7 +261,7 @@ export const profile = {
       dates: 'Jun 2024 – Jul 2024',
       bullets: [
         'Participated in a rigorous social enterprise bootcamp featuring workshops and a two-week mentorship focused on startup development.',
-        'Co-developed a marketplace platform concept to help local artisans from Borneo sell their products, earning 3rd place in the final pitch competition.',
+        'Co-developed a marketplace platform concept to help local artisans from Borneo sell their products, placing 3rd out of 20 competing teams in the final pitch competition.',
         'Secured a paid mentorship opportunity with FutureLab based on the success of the startup pitch.',
       ],
       tech: [
@@ -454,7 +454,7 @@ export const profile = {
     {
       title: 'EduSpark Marketplace (Bootcamp)',
       description:
-        "Marketplace concept for local Borneo artisans, built during FutureLab.my's social enterprise bootcamp. Placed 3rd in the closing pitch competition and earned a paid mentorship offer.",
+        "Marketplace concept for local Borneo artisans, built during FutureLab.my's social enterprise bootcamp. Placed 3rd out of 20 competing teams in the closing pitch competition and earned a paid mentorship offer.",
       link: '#',
       tech: [
         'Web Development',

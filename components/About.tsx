@@ -17,13 +17,13 @@ export default function About() {
           Penn State&apos;s alumni-relations CRM migration that made sure no
           high-value prospect records got lost in the transition, and the
           constitution I wrote and registered to get a new Penn State student
-          organization officially recognized. I&apos;m a Computer
-          Engineering senior at Penn State, graduating May 2026, looking for
-          internship and entry-level roles where I can keep doing that kind
-          of work in AI or in systems. And if you&apos;re working through
-          something similar right now, whether that&apos;s an ambiguous
-          technical problem or life as an international student far from
-          home, I&apos;d like to hear from you.
+          organization officially recognized. I graduated from Penn State
+          with a Computer Engineering degree in May 2026, and I&apos;m
+          looking for entry-level and full-time roles where I can keep doing
+          that kind of work in AI or in systems. And if you&apos;re working
+          through something similar right now, whether that&apos;s an
+          ambiguous technical problem or life as an international student far
+          from home, I&apos;d like to hear from you.
         </p>
       </div>
     </Section>
