@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Mohammad Ilham bin Kassim',
   headline:
-    "I build AI tools and systems software — and I co-founded and govern a Penn State student organization from its constitution up.",
+    'I build AI tools and systems software. I also co-founded and govern a Penn State student organization from its constitution up.',
   role: 'Computer Engineering Student',
   tagline:
     'Recent work: a Chrome extension that flags social media misinformation, and a trading algorithm that beat the S&P 500 by 2.5% in its first week.',
@@ -321,7 +321,7 @@ export const profile = {
       tech: ['Organizational Leadership', 'Governance', 'Cultural Programming'],
     },
     {
-      role: 'Logistics Director — MCN Committee',
+      role: 'Logistics Director, MCN Committee',
       org: 'Penn State University',
       dates: 'Jan 2023 – Jan 2024',
       bullets: [
@@ -392,12 +392,12 @@ export const profile = {
     {
       title: 'Qwen Shariah Autopilot',
       description:
-        "Global AI Hackathon Series submission built on Qwen Cloud — adds an autonomous decision layer on top of the Shariah Algo Trader's Shariah-compliant signal engine.",
+        "Built on Qwen Cloud for the Global AI Hackathon Series, adding an autonomous decision layer on top of the Shariah Algo Trader's Shariah-compliant signal engine.",
       link: 'https://github.com/IlhamKassim/qwen-shariah-autopilot',
       tech: ['Qwen', 'AI/ML', 'Algorithmic Trading'],
     },
     {
-      title: 'Thread Scheduler — Operating Systems',
+      title: 'Thread Scheduler (Operating Systems)',
       description:
         'A multithreaded CPU thread scheduler supporting FCFS, SRTF, and MLFQ scheduling policies using pthreads, replicating real-life CPU and I/O timing to generate Gantt chart outputs for thread execution.',
       link: '#',
@@ -406,7 +406,7 @@ export const profile = {
     {
       title: 'Personal Portfolio Website',
       description:
-        'This site — a responsive personal portfolio built with Next.js App Router, TypeScript, and Tailwind CSS, featuring dark mode, Framer Motion animations, and SEO-optimized metadata.',
+        'This site is a responsive personal portfolio built with Next.js App Router, TypeScript, and Tailwind CSS, featuring dark mode, Framer Motion animations, and SEO-optimized metadata.',
       link: 'https://github.com/IlhamKassim/ilham-portfolio',
       tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'Framer Motion'],
     },
@@ -447,14 +447,14 @@ export const profile = {
     {
       title: 'AI in Fundraising Briefs',
       description:
-        "Evaluation of generative AI and predictive-modeling tools for higher-ed fundraising — the research behind the pilot-project roadmaps delivered to Penn State's Division of Development and Alumni Relations.",
+        "Evaluation of generative AI and predictive-modeling tools for higher-ed fundraising. The research behind the pilot-project roadmaps delivered to Penn State's Division of Development and Alumni Relations.",
       link: '#',
       tech: ['Research', 'Data Analysis', 'AI/ML', 'Technical Writing'],
     },
     {
       title: 'EduSpark Marketplace (Bootcamp)',
       description:
-        "Marketplace concept for local Borneo artisans, built during FutureLab.my's social enterprise bootcamp — placed 3rd in the closing pitch competition and earned a paid mentorship offer.",
+        "Marketplace concept for local Borneo artisans, built during FutureLab.my's social enterprise bootcamp. Placed 3rd in the closing pitch competition and earned a paid mentorship offer.",
       link: '#',
       tech: [
         'Web Development',
