@@ -2,16 +2,18 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import Link from 'next/link'
 import DarkModeToggle from './DarkModeToggle'
 import { scrollToSection } from '@/lib/utils'
 
 const navItems = [
-  { name: 'About', href: 'about' },
-  { name: 'Experience', href: 'experience' },
-  { name: 'Education', href: 'education' },
-  { name: 'Skills', href: 'skills' },
-  { name: 'Projects', href: 'projects' },
-  { name: 'Contact', href: 'contact' },
+  { name: 'About', type: 'anchor' as const, href: 'about' },
+  { name: 'Experience', type: 'anchor' as const, href: 'experience' },
+  { name: 'Education', type: 'anchor' as const, href: 'education' },
+  { name: 'Skills', type: 'anchor' as const, href: 'skills' },
+  { name: 'Projects', type: 'anchor' as const, href: 'projects' },
+  { name: 'Journey', type: 'route' as const, href: '/journey' },
+  { name: 'Contact', type: 'anchor' as const, href: 'contact' },
 ]
 
 export default function Header() {
@@ -53,15 +55,25 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden items-center space-x-8 md:flex">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleNavClick(item.href)}
-                className="font-medium text-foreground transition-colors hover:text-primary"
-              >
-                {item.name}
-              </button>
-            ))}
+            {navItems.map((item) =>
+              item.type === 'route' ? (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="font-medium text-foreground transition-colors hover:text-primary"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavClick(item.href)}
+                  className="font-medium text-foreground transition-colors hover:text-primary"
+                >
+                  {item.name}
+                </button>
+              )
+            )}
             <DarkModeToggle />
           </div>
 
@@ -86,15 +98,26 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div className="mt-4 border-t border-border py-4 md:hidden">
             <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => handleNavClick(item.href)}
-                  className="py-2 text-left font-medium text-foreground transition-colors hover:text-primary"
-                >
-                  {item.name}
-                </button>
-              ))}
+              {navItems.map((item) =>
+                item.type === 'route' ? (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="py-2 text-left font-medium text-foreground transition-colors hover:text-primary"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.name}
+                    onClick={() => handleNavClick(item.href)}
+                    className="py-2 text-left font-medium text-foreground transition-colors hover:text-primary"
+                  >
+                    {item.name}
+                  </button>
+                )
+              )}
             </div>
           </div>
         )}
