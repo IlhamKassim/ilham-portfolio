@@ -1,0 +1,40 @@
+import { Metadata } from 'next'
+import { Button } from '@/components/ui/button'
+import { ArrowLeft } from 'lucide-react'
+import Link from 'next/link'
+import JourneyTimeline from '@/components/JourneyTimeline'
+
+export const metadata: Metadata = {
+  title: 'My Journey - Mohammad Ilham bin Kassim',
+  description: 'How I got from Papar, Malaysia to Penn State University.',
+}
+
+export default function JourneyPage() {
+  return (
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-16">
+        <div className="mx-auto max-w-3xl">
+          <h1 className="mb-2 text-4xl font-bold">My Journey</h1>
+          <p className="mb-4 text-muted-foreground">
+            From Papar to Penn State.
+          </p>
+          <p className="mb-12 max-w-xl text-xs italic text-muted-foreground">
+            This page uses placeholder photos for now, dropped in to test the
+            layout. Swap them for the real ones whenever you have them ready.
+          </p>
+
+          <JourneyTimeline />
+
+          <div className="mt-16">
+            <Button variant="outline" asChild>
+              <Link href="/">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to Portfolio
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

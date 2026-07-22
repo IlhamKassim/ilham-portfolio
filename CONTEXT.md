@@ -24,6 +24,10 @@ _Avoid_: displaying the full ~90-item LinkedIn skill list; Skill Category member
 Recruiters — the reader every wording decision on the site is optimized for first. The site still serves general-public and follower visitors (named in the intro above), but as a secondary constraint: copy shouldn't become dry or jargon-only in service of recruiter-scannability.
 _Avoid_: treating "the audience" as undifferentiated; when a wording choice serves recruiters and general visitors differently, recruiters win.
 
+**Journey Page**:
+A separate route (`/journey`) telling Ilham's chronological origin story, from childhood in Papar through arriving at Penn State. Sourced directly from Ilham's own account in conversation, not from the Source of Record (LinkedIn export / resume) — those govern career facts, not personal narrative. Deliberately off the main scroll path so it doesn't compete for recruiter scan-time; its Primary Audience is general-public/follower readers, the opposite of the site-wide default.
+_Avoid_: holding this page to the Source of Record rule or the Primary Audience: Recruiters rule — both are explicitly overridden here by design.
+
 ## Resolved decisions
 
 - **Metrics audit (2026-07-07)**: every quantified claim in Experience was reviewed against what Ilham could verify. Non-verifiable numbers were removed or rewritten as qualitative impact statements rather than invented figures (e.g. DDAR alumni count corrected to 200+; NSO mentee count corrected to 5; peer-reviewed-article and prep-time-reduction claims dropped from the poultry research and Online Program Moderator roles). This is the reference precedent for how to handle any future unverifiable stat.
