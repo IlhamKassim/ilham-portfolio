@@ -8,7 +8,25 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Geist', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['"Geist Mono"', 'ui-monospace', 'Menlo', 'monospace'],
+        serif: ['"Instrument Serif"', 'serif'],
+        bricolage: ['"Bricolage Grotesque"', 'sans-serif'],
+      },
       colors: {
+        v2: {
+          bg: '#0A0C0B',
+          card: '#111413',
+          surface: '#0E1110',
+          border: '#1F2422',
+          borderLight: '#2C3330',
+          lime: '#C5F547',
+          textMuted: '#5C635F',
+          textSub: '#8A918C',
+          textBody: '#A4ABA6',
+          textMain: '#E6E9E4',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

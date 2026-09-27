@@ -1,25 +1,19 @@
-import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Experience from '@/components/Experience'
-import Education from '@/components/Education'
-import Skills from '@/components/Skills'
-import Projects from '@/components/Projects'
-import Certifications from '@/components/Certifications'
-import Languages from '@/components/Languages'
-import Contact from '@/components/Contact'
+import Hero from '@/components/v2/Hero'
+import FeaturedBuilds from '@/components/v2/FeaturedBuilds'
+import EverythingElse from '@/components/v2/EverythingElse'
+import ExperienceSection from '@/components/v2/ExperienceSection'
+import StackSection from '@/components/v2/StackSection'
+import ContactSection from '@/components/v2/ContactSection'
 
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen bg-[#0A0C0B]">
       <Hero />
-      <About />
-      <Experience />
-      <Education />
-      <Skills />
-      <Projects />
-      <Certifications />
-      <Languages />
-      <Contact />
-    </>
+      <FeaturedBuilds />
+      <EverythingElse />
+      <ExperienceSection />
+      <StackSection />
+      <ContactSection />
+    </div>
   )
 }

@@ -1,33 +1,40 @@
 'use client'
 
-import { ArrowUp } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+  const pathname = usePathname()
+
+  // On the home page, the integrated ContactSection already provides the footer.
+  if (pathname === '/') {
+    return null
   }
 
   return (
-    <footer className="border-t border-border bg-muted/50">
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
-          <div className="text-center md:text-left">
-            <p className="text-muted-foreground">
-              © {new Date().getFullYear()} Mohammad Ilham bin Kassim. All
-              rights reserved.
-            </p>
-          </div>
-
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={scrollToTop}
-            className="flex items-center space-x-2"
+    <footer className="border-t border-[#1F2422] bg-[#0A0C0B] py-8 font-mono text-[13px] text-[#8A918C]">
+      <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span>© {new Date().getFullYear()} Mohammad Ilham bin Kassim</span>
+        <div className="flex items-center gap-6">
+          <Link href="/" className="text-[#C5F547] hover:underline">
+            ~/ilham
+          </Link>
+          <a
+            href="https://www.linkedin.com/in/ilhamkassim"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#C5F547] transition-colors"
           >
-            <ArrowUp className="h-4 w-4" />
-            <span>Back to top</span>
-          </Button>
+            linkedin ↗
+          </a>
+          <a
+            href="https://github.com/IlhamKassim"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#C5F547] transition-colors"
+          >
+            github ↗
+          </a>
         </div>
       </div>
     </footer>
