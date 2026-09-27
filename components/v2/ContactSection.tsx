@@ -54,11 +54,11 @@ export default function ContactSection() {
         </button>
       </div>
 
-      {/* Human pitch text */}
+      {/* Direct human message */}
       <p className="mt-5 font-sans text-[15px] leading-[1.55] text-[#8A918C] max-w-[620px]">
-        Hiring for AI or systems roles — or working through something ambiguous,
-        technical or otherwise, as an international student far from home? I’d
-        like to hear from you.
+        I’m open to full-time and entry-level engineering roles starting mid-2026.
+        Whether you’re hiring for systems or AI teams, want to talk through any of my projects,
+        or just want to say hi, feel free to reach out.
       </p>
 
       {/* Bottom links and copyright */}

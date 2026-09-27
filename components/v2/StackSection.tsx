@@ -15,14 +15,14 @@ export default function StackSection() {
               Pennsylvania State University
             </div>
             <div className="text-sm text-[#8A918C] mt-1">
-              B.S. Computer Engineering · 2022–2026
+              B.S. in Computer Engineering · 2022–2026
             </div>
           </div>
           <div className="text-sm leading-[1.5] text-[#A4ABA6]">
-            Computer Organization, Systems Programming, Data Structures, Electronic Circuit Design
+            Selected Coursework: Computer Architecture, Operating Systems, Systems Programming, Data Structures, Digital Logic Design.
           </div>
           <div className="font-mono text-xs text-[#C5F547] mt-auto pt-2 font-medium">
-            MARA YTP Scholar
+            MARA YTP Scholar (Full Sponsorship)
           </div>
         </div>
 

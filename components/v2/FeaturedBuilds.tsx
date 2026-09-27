@@ -57,7 +57,7 @@ export default function FeaturedBuilds() {
                 +5%
               </div>
               <div className="font-mono text-[11px] text-[#8A918C] mt-1">
-                vs SPUS ETF
+                vs SPUS ETF benchmark
               </div>
             </div>
             <div className="bg-[#0E1110] p-4">
@@ -90,8 +90,10 @@ export default function FeaturedBuilds() {
           </div>
 
           <p className="m-0 text-[15px] leading-[1.55] text-[#A4ABA6]">
-            Trades only inside a Shariah-compliant universe, with a React/TS dashboard
-            for live portfolio, compliance and factor visibility. pytest-covered.
+            An automated trading bot that screens US equities for Shariah compliance
+            before calculating factor scores and executing paper trades through the Alpaca API.
+            Includes a FastAPI backend, a React/TypeScript dashboard to monitor live weights, and
+            full pytest coverage.
           </p>
         </div>
 
@@ -127,14 +129,15 @@ export default function FeaturedBuilds() {
             </div>
 
             <div className="absolute left-3 bottom-2.5 font-mono text-[11px] text-[#5C635F]">
-              1,000 configs / run · 18-dimensional space
+              1,000 configs per run · 18-variable microarchitecture space
             </div>
           </div>
 
           <p className="m-0 text-[15px] leading-[1.55] text-[#A4ABA6]">
-            Automates design-space exploration of processor and cache configs with a
-            heuristic search, optimizing execution time or Energy-Delay Product under
-            cache-hierarchy constraints.
+            A C++ simulation framework that benchmarks how changing cache sizes,
+            pipeline stages, and branch predictors affects processor performance.
+            Uses a heuristic search across 1,000 architectural configurations per run to find
+            the sweet spot between execution speed and energy consumption (Energy-Delay Product).
           </p>
         </div>
 
@@ -143,14 +146,15 @@ export default function FeaturedBuilds() {
           {/* Controls Column */}
           <div className="flex flex-col gap-4.5 max-w-[380px]">
             <div className="font-mono text-xs text-[#5C635F]">
-              03 / C++ · PTHREADS · OS
+              03 / C++ · PTHREADS · OPERATING SYSTEMS
             </div>
             <div className="text-[30px] font-semibold tracking-[-0.03em] leading-[1.05] text-[#E6E9E4]">
               Thread Scheduler
             </div>
             <p className="m-0 text-[15px] leading-[1.55] text-[#A4ABA6]">
-              Multithreaded CPU scheduler replicating real CPU/I-O timing and
-              emitting Gantt charts. Switch policies to see the trade-off.
+              A multithreaded CPU scheduler built in C++ with POSIX threads. It simulates
+              real CPU bursts and I/O wait times across different scheduling algorithms,
+              rendering Gantt charts so you can see the trade-offs in action.
             </p>
 
             {/* Policy Buttons */}

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   ...defaultMetadata,
   title: 'Mohammad Ilham bin Kassim — Computer Engineer',
   description:
-    'AI tools and systems software, built to be trusted. Penn State Computer Engineering, May 2026.',
+    'Computer Engineering student at Penn State graduating in May 2026. Building practical AI tools, systems software, and student organizations.',
 }
 
 export default function RootLayout({

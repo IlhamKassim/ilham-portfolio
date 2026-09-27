@@ -1,12 +1,10 @@
-import Link from 'next/link'
-
 export default function Hero() {
   return (
     <section
       id="top"
       className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-12 items-end px-[clamp(20px,4vw,48px)] pt-[clamp(56px,9vw,112px)] pb-[clamp(48px,7vw,88px)] bg-spec-grid"
     >
-      {/* Left Column: Headline and Pitch */}
+      {/* Left Column: Headline and Introduction */}
       <div className="min-w-0">
         <div className="font-mono text-[13px] text-[#8A918C]">
           Mohammad Ilham bin Kassim — Computer Engineer
@@ -15,10 +13,12 @@ export default function Hero() {
           AI tools and systems software,{' '}
           <span className="text-[#C5F547]">built to be trusted.</span>
         </h1>
-        <p className="mt-7 max-w-[560px] text-lg leading-[1.55] text-[#A4ABA6]">
-          Penn State Computer Engineering, May 2026. I take things that are hard to
-          trust — a model’s black box, a CRM mid-migration, a club with no
-          constitution — and make them legible.
+        <p className="mt-7 max-w-[580px] text-lg leading-[1.55] text-[#A4ABA6]">
+          I’m a Computer Engineering student at Penn State graduating in May 2026.
+          I build practical AI tools and low-level systems software. Most of my work
+          centers on taking complex, opaque systems — like an AI model’s reasoning,
+          a messy database migration, or a brand new student club — and turning them
+          into something reliable, legible, and easy to use.
         </p>
 
         {/* CTA Buttons */}
@@ -35,7 +35,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="border border-[#2C3330] text-[#E6E9E4] px-[22px] py-[14px] rounded-[6px] text-[15px] hover:border-[#C5F547] hover:text-[#C5F547] transition-colors"
           >
-            Résumé.pdf
+            Résumé (PDF)
           </a>
           <a
             href="https://github.com/IlhamKassim"
@@ -70,7 +70,7 @@ export default function Hero() {
               Ilham Kassim
             </div>
             <div className="text-[#5C635F] text-[13px] mt-0.5">
-              EN / MS · State College, PA
+              State College, PA · English / Malay
             </div>
           </div>
         </div>
@@ -81,13 +81,13 @@ export default function Hero() {
           <span className="text-[#E6E9E4]">B.S. CompE, Penn State ’26</span>
 
           <span className="text-[#5C635F]">focus</span>
-          <span className="text-[#E6E9E4]">AI · systems programming</span>
+          <span className="text-[#E6E9E4]">AI tools · systems programming</span>
 
           <span className="text-[#5C635F]">stack</span>
           <span className="text-[#E6E9E4]">Python, C++, TS, FastAPI, Next.js</span>
 
           <span className="text-[#5C635F]">also</span>
-          <span className="text-[#E6E9E4]">co-founder, The Borneo</span>
+          <span className="text-[#E6E9E4]">Co-founder, The Borneo (Penn State)</span>
 
           <span className="text-[#5C635F]">status</span>
           <span className="text-[#C5F547]">open to entry-level / full-time</span>

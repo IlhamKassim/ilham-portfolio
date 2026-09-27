@@ -28,7 +28,7 @@ export default function ExperienceSection() {
         <div className="flex flex-col gap-4 max-w-[320px]">
           <div className="font-mono text-[13px] text-[#5C635F]">/experience</div>
           <h2 className="text-[36px] font-semibold tracking-[-0.03em] leading-[1.05] text-[#E6E9E4]">
-            Where I’ve done the work
+            Experience &amp; Leadership
           </h2>
 
           {/* Tab Switcher */}
@@ -52,14 +52,14 @@ export default function ExperienceSection() {
           </div>
 
           <p className="m-0 text-[13px] leading-[1.5] text-[#5C635F] pt-2">
-            Full history, including campus jobs, on the{' '}
+            For a full chronological record including on-campus roles, check out my{' '}
             <a
               href="/Ilham_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#8A918C] underline hover:text-[#C5F547]"
             >
-              résumé
+              résumé (PDF)
             </a>
             .
           </p>
