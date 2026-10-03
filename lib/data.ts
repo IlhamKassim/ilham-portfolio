@@ -722,7 +722,7 @@ export const profile = {
     {
       title: 'Aqildo Photo CRM',
       description:
-        'A CRM for a convocation photography agency: photographer vetting, events, packages, time slots, the booking lifecycle and a two-stage payment split. The domain layer is framework-free and covered by 65 tests.',
+        'A side project: a CRM for running a convocation photography agency, with photographer vetting, events, packages, time slots, the booking lifecycle and a two-stage payment split. The domain layer is framework-free and covered by 65 tests.',
       link: 'https://github.com/IlhamKassim/aqildophoto-agency',
       tech: ['Next.js', 'TypeScript', 'SQLite', 'Vitest'],
       category: ['web'],
