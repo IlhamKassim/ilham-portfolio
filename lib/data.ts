@@ -1,66 +1,352 @@
+export type ServiceUnit = 'project' | 'hour' | 'session' | 'workshop'
+
+export interface Service {
+  code: string
+  title: string
+  description: string
+  /** Starting price in USD. */
+  price: number
+  unit: ServiceUnit
+}
+
+export interface ServiceGroup {
+  id: 'build' | 'teach'
+  title: string
+  blurb: string
+  items: Service[]
+}
+
+export type ProjectCategory = 'web' | 'ai' | 'data' | 'systems'
+
+export interface Project {
+  title: string
+  /** One line shown under the title on featured cards. */
+  kicker?: string
+  description: string
+  link: string
+  /** Secondary link, usually the source repo when `link` is the live site. */
+  repo?: string
+  tech: string[]
+  category: ProjectCategory[]
+  featured?: boolean
+  live?: boolean
+  image?: string
+}
+
+export interface Experience {
+  role: string
+  org: string
+  dates: string
+  bullets: string[]
+  tech?: string[]
+  /** Shown on the home page. Everything else sits behind "Show full history". */
+  highlight?: boolean
+}
+
 export const profile = {
   name: 'Mohammad Ilham bin Kassim',
-  headline:
-    'I build AI tools and systems software. I also co-founded and govern a Penn State student organization from its constitution up.',
-  role: 'Computer Engineering Graduate',
+  shortName: 'Ilham Kassim',
+  role: 'Freelance Developer',
+  headline: 'Software that shows its work.',
+  intro:
+    "I'm Ilham, a Penn State Computer Engineering graduate freelancing from Sabah. I build websites, web apps, AI features and data dashboards for teams anywhere. You get working software, and you get the reasons behind it.",
   tagline:
-    'Recent work: a Chrome extension that flags social media misinformation, and a trading algorithm that beat the S&P 500 by 2.5% in its first week.',
-  location: 'State College, PA, USA',
+    'Freelance web, AI and data developer from Sabah, Malaysia. Builder of SabahKu and ShariahTrading, part of the PolitikKu team.',
+  location: 'Papar, Sabah, Malaysia',
+  timezone: 'GMT+8',
   avatar: '/avatar.jpg',
   email: 'ilhamkassim2003@gmail.com',
   phone: '+60 17-528 4805',
+  /** Digits only, for wa.me links. */
+  whatsapp: '60175284805',
   linkedin: 'https://www.linkedin.com/in/ilhamkassim',
   github: 'https://github.com/IlhamKassim',
   graduation: 'May 2026',
   gpa: '3.33/4.0',
   languages: ['English (Native/Bilingual)', 'Malay (Native/Bilingual)'],
-  openTo: ['Entry-level roles', 'Full-time opportunities'],
+  openTo: ['Freelance projects', 'Tutoring', 'Full-time roles'],
+
+  stats: [
+    { value: '4', label: 'live products I built or help build' },
+    { value: '20+', label: 'public repos on GitHub' },
+    { value: '2,900+', label: 'LinkedIn followers reading my build notes' },
+    { value: 'B.S.', label: 'Computer Engineering, Penn State' },
+  ],
+
+  services: [
+    {
+      id: 'build',
+      title: 'Build',
+      blurb:
+        'Fixed-scope work. You get the code, a short write-up of the decisions, and a walkthrough.',
+      items: [
+        {
+          code: 'B1',
+          title: 'Landing page',
+          description:
+            'One fast, mobile-first page with a clear call to action and a WhatsApp or email button.',
+          price: 300,
+          unit: 'project',
+        },
+        {
+          code: 'B2',
+          title: 'Business or portfolio website',
+          description:
+            'A few pages, your own domain, deployed and easy to update. Like this one.',
+          price: 700,
+          unit: 'project',
+        },
+        {
+          code: 'B3',
+          title: 'Web app or internal dashboard',
+          description:
+            'Next.js with Postgres or Supabase. Logins, an admin console, the workflow your team does by hand today.',
+          price: 1800,
+          unit: 'project',
+        },
+        {
+          code: 'B4',
+          title: 'AI feature or assistant',
+          description:
+            'Add Claude or Gemini to your product: answer from your documents, sort messages, pull fields out of forms.',
+          price: 600,
+          unit: 'project',
+        },
+        {
+          code: 'B5',
+          title: 'Workflow automation',
+          description:
+            'Connect forms, sheets, email and WhatsApp so the copy-paste stops. Includes MyInvois e-invoicing.',
+          price: 400,
+          unit: 'project',
+        },
+        {
+          code: 'B6',
+          title: 'Data map or dashboard',
+          description:
+            'Turn public or internal data into maps, rankings and charts, with a source and a year on every number.',
+          price: 1200,
+          unit: 'project',
+        },
+        {
+          code: 'B7',
+          title: 'Quant and trading tools',
+          description:
+            'Stock screens, backtests and paper-trading bots on Alpaca, including Shariah-compliant universes.',
+          price: 800,
+          unit: 'project',
+        },
+        {
+          code: 'B8',
+          title: 'Fixes and small changes',
+          description:
+            'Bugs, updates and small features on a site or app you already have.',
+          price: 25,
+          unit: 'hour',
+        },
+      ],
+    },
+    {
+      id: 'teach',
+      title: 'Teach',
+      blurb:
+        'Online, 60 minutes a session unless we agree otherwise. Bring your own project if you have one.',
+      items: [
+        {
+          code: 'T1',
+          title: 'Programming tutoring',
+          description:
+            'Python, C++, Java or JavaScript, data structures, and Computer Engineering coursework.',
+          price: 20,
+          unit: 'session',
+        },
+        {
+          code: 'T2',
+          title: 'Build with AI coaching',
+          description:
+            'Use Claude Code, Cursor and agents on a real project without losing track of why the code works.',
+          price: 30,
+          unit: 'session',
+        },
+        {
+          code: 'T3',
+          title: 'Project and code review',
+          description:
+            'I read your repo before we meet, then we go through what to fix first. Written notes included.',
+          price: 25,
+          unit: 'session',
+        },
+        {
+          code: 'T4',
+          title: 'Workshop for your team or club',
+          description:
+            'Vibe-coding sessions, JEV and agent integration, or hackathon prep. The formats I run with KrackedDevs.',
+          price: 250,
+          unit: 'workshop',
+        },
+        {
+          code: 'T5',
+          title: 'Studying in the US',
+          description:
+            'The transfer route, applications and the first year as an international student, from someone who did it.',
+          price: 15,
+          unit: 'session',
+        },
+      ],
+    },
+  ] as ServiceGroup[],
+
+  process: [
+    {
+      step: '01',
+      title: 'Tell me the problem',
+      body: 'Message me on WhatsApp or email. A rough idea is enough to start.',
+    },
+    {
+      step: '02',
+      title: 'Get a scope and a price',
+      body: "I reply with what I'd build, what I'd leave out, and a fixed quote.",
+    },
+    {
+      step: '03',
+      title: 'Watch it take shape',
+      body: 'You get a preview link early and see changes as they land.',
+    },
+    {
+      step: '04',
+      title: 'Take it with you',
+      body: 'Code in your GitHub, notes on the decisions, and a walkthrough call.',
+    },
+  ],
+
+  faq: [
+    {
+      q: 'What does "from" mean on the prices?',
+      a: "It's where a small, clear version of that work starts. Your quote depends on scope, so I send a fixed number before anything begins.",
+    },
+    {
+      q: 'Do you work with clients outside Malaysia?',
+      a: "Yes. Everything happens remotely, and I'm on Malaysia time (GMT+8). Prices are in USD.",
+    },
+    {
+      q: 'Do you use AI to write the code?',
+      a: 'Yes, and I check its work. I can explain every decision in what I hand over, including where AI helped and how I verified it.',
+    },
+    {
+      q: 'Can you work on a site or app I already have?',
+      a: 'Usually. Send me the link or the repo and I will tell you honestly whether fixing it or starting over makes more sense.',
+    },
+  ],
+
+  community: [
+    {
+      name: 'KrackedDevs',
+      role: 'Ambassador, Borneo',
+      body: "Malaysia's builder community. I help run the Borneo branch's events: JEV integration workshops, vibe-coding sessions and hackathons. I also co-ran CASE FILE 01, a free online lesson on JEV, with Wan from Sarawak.",
+      link: 'https://krackeddevs.com',
+    },
+    {
+      name: 'DeckerGUI Developers',
+      role: 'Contributor',
+      body: 'An independent guild from Sarawak building governance-first tooling for AI agents: clear roles, scoped permissions and human oversight.',
+      link: 'https://portfolios.deckergui.my/home',
+    },
+    {
+      name: 'The Borneo',
+      role: 'Co-founder',
+      body: 'A Penn State student organization for the heritage of Sabah, Sarawak and Kalimantan. I wrote its constitution and got it registered.',
+      link: '',
+    },
+  ],
+
+  notes: [
+    {
+      hook: 'If AI writes the code, what should a fresh graduate still know?',
+      takeaway:
+        'A working application is one outcome. Understanding why it works is another.',
+      tag: 'AI',
+    },
+    {
+      hook: 'My AI job search tool was finding real jobs. It was still wasting my time.',
+      takeaway:
+        'I did not change the model. I changed the definition of a useful result.',
+      tag: 'AI engineering',
+    },
+    {
+      hook: 'A friend sent me an AI model that cannot write a sentence, so I tested it on my inbox.',
+      takeaway:
+        'Jev named all 10 email types correctly. It still disagreed with me about what counts as "today".',
+      tag: 'Experiment',
+    },
+    {
+      hook: 'An election map can show the correct results in the wrong places.',
+      takeaway:
+        "Old results on today's 222 seat boundaries would look right and be wrong, so some seats stay blank on purpose.",
+      tag: 'PolitikKu',
+    },
+    {
+      hook: 'I spent a month comparing AI coding tools.',
+      takeaway:
+        'Choosing the right workflow matters as much as choosing the right model.',
+      tag: 'Tools',
+    },
+    {
+      hook: 'The uncomfortable part of building in public is deciding which work is worth posting.',
+      takeaway:
+        'I am learning to treat public building as documentation rather than a daily performance.',
+      tag: 'Building in public',
+    },
+  ],
 
   skillCategories: [
     {
-      category: 'Languages & Frameworks',
+      category: 'Build',
       items: [
-        'Python',
-        'Java',
-        'C++',
-        'JavaScript',
         'TypeScript',
-        'HTML5 & CSS',
-        'React.js',
+        'React',
         'Next.js',
-        'FastAPI',
         'Tailwind CSS',
+        'Node.js & Express',
+        'FastAPI',
+        'Supabase',
+        'PostgreSQL',
+      ],
+    },
+    {
+      category: 'AI & Data',
+      items: [
+        'Claude API',
+        'Gemini API',
+        'TypeSafe Jev',
+        'Prompt Engineering',
         'Pandas',
         'Scikit-Learn',
+        'LightGBM',
+        'PostGIS',
       ],
     },
     {
-      category: 'Systems & AI',
+      category: 'Systems',
       items: [
+        'Python',
+        'C++',
+        'Java',
+        'Multithreading',
         'Operating Systems',
-        'Multithreading & Process Scheduling',
+        'Computer Architecture',
         'Data Structures & Algorithms',
-        'System Architecture',
-        'Machine Learning',
-        'Prompt Engineering',
-        'Predictive Modeling',
-        'Database Design',
-        'Gemini API',
-        'Alpaca API',
-        'Google Search API',
       ],
     },
     {
-      category: 'Leadership & Operations',
+      category: 'Shipping & People',
       items: [
-        'Team Leadership',
-        'Project Management',
+        'Vitest & pytest',
+        'Docker',
+        'Vercel',
+        'Workshops & Teaching',
         'Event Management',
-        'Stakeholder Engagement',
-        'Diversity, Equity & Inclusion',
         'Mentoring',
-        'Public & Foreign Affairs',
-        'Strategic Communications',
+        'Stakeholder Engagement',
       ],
     },
   ],
@@ -146,6 +432,27 @@ export const profile = {
 
   experiences: [
     {
+      role: 'Ambassador, Borneo',
+      org: 'KrackedDevs',
+      dates: '2026 – Present',
+      bullets: [
+        "Help run the Borneo branch's events: JEV integration workshops, vibe-coding sessions and hackathons.",
+        'Co-ran CASE FILE 01, a free online lesson on JEV and dual-agent async workflows.',
+      ],
+      tech: ['Workshops', 'TypeSafe Jev', 'AI Agents', 'Community'],
+      highlight: true,
+    },
+    {
+      role: 'Contributor',
+      org: 'DeckerGUI Developers',
+      dates: '2026 – Present',
+      bullets: [
+        'Contribute to an open-source guild building governance-first tooling for agentic AI.',
+      ],
+      tech: ['Agentic AI', 'Open Source'],
+      highlight: true,
+    },
+    {
       role: 'Board Transition Committee Member',
       org: 'Penn State University',
       dates: 'Jun 2025 – Jun 2025',
@@ -170,6 +477,7 @@ export const profile = {
         'Microsoft 365',
         'Database Management',
       ],
+      highlight: true,
     },
     {
       role: 'NSO Frontline',
@@ -215,6 +523,7 @@ export const profile = {
         'Virtual Learning',
         'Event Management',
       ],
+      highlight: true,
     },
     {
       role: 'Smeal Business Core Proctor',
@@ -270,6 +579,7 @@ export const profile = {
         'Startup Development',
         'Pitching',
       ],
+      highlight: true,
     },
     {
       role: 'National Training Week Program',
@@ -308,6 +618,7 @@ export const profile = {
         'External Relations',
         'Team Management',
       ],
+      highlight: true,
     },
     {
       role: 'Founding Member & Operational Director',
@@ -319,6 +630,7 @@ export const profile = {
         'Authored the club constitution and led its official registration with Pennsylvania State University.',
       ],
       tech: ['Organizational Leadership', 'Governance', 'Cultural Programming'],
+      highlight: true,
     },
     {
       role: 'Logistics Director, MCN Committee',
@@ -345,123 +657,172 @@ export const profile = {
       ],
       tech: ['Customer Service', 'Food Service', 'Teamwork'],
     },
-  ],
+  ] as Experience[],
 
   projects: [
     {
+      title: 'SabahKu',
+      kicker: 'An economic atlas of Sabah, district by district',
+      description:
+        "I wanted to see Sabah's economy district by district, so I built the map. Pick an indicator and a year, and the map and rankings for all 27 districts update together: household income, poverty, jobs, GDP growth and night lights. Every number carries a source and a year, and modelled numbers come with an uncertainty range.",
+      link: 'https://sabah-ku.com',
+      repo: 'https://github.com/IlhamKassim/sabah-atlas',
+      tech: ['Next.js', 'FastAPI', 'PostGIS', 'LightGBM', 'OpenDOSM'],
+      category: ['data', 'web'],
+      featured: true,
+      live: true,
+      image: '/projects/sabahku.jpg',
+    },
+    {
+      title: 'PolitikKu',
+      kicker: 'Find your parliamentary seat and your MP',
+      description:
+        "Part of the team behind a civic site covering all 222 Dewan Rakyat seats. We brought historical election results back to 1955 onto the seat map. Old results drawn on today's boundaries would look right and be wrong, so seats we can't place honestly stay blank, and the page explains why.",
+      link: 'https://politikku.my',
+      tech: ['Next.js', 'TypeScript', 'Maps', 'Open Data'],
+      category: ['data', 'web'],
+      featured: true,
+      live: true,
+      image: '/projects/politikku.jpg',
+    },
+    {
+      title: 'ShariahTrading',
+      kicker: 'A Shariah-screened quant engine, running on paper',
+      description:
+        'Screens US companies through Shariah ETF holdings, ranks them on momentum, quality, low volatility and value, and rebalances monthly on Alpaca paper accounts. On a $100K paper portfolio it beat the S&P 500 by 2.5% and the SPUS ETF by 5% in its first week. FastAPI backend, React dashboard, pytest suite.',
+      link: 'https://shariahtrading.my',
+      tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'Alpaca API'],
+      category: ['data', 'web'],
+      featured: true,
+      live: true,
+      image: '/projects/shariahtrading.jpg',
+    },
+    {
+      title: 'Langkah',
+      kicker: 'Which graduate programmes are open to you, and when',
+      description:
+        'Final-year students in Malaysia answer seven questions and see the graduate programmes they qualify for, with every window on one calendar. It only shows programmes checked against an employer page. Samples stay hidden unless you ask for them.',
+      link: 'https://graduate-job-seeker.vercel.app',
+      repo: 'https://github.com/IlhamKassim/graduate-job-seeker',
+      tech: ['Next.js', 'TypeScript', 'Vercel'],
+      category: ['web'],
+      featured: true,
+      live: true,
+      image: '/projects/langkah.jpg',
+    },
+    {
       title: 'Reber Building Virtual Tour',
+      kicker: 'Penn State capstone, lead developer',
       description:
-        'Lead Developer for a web-based interactive showcase and 360° virtual tour of the redesigned Mechanical Engineering hallway in the Reber Building, built for the Kinetic Engineering Collective capstone. Features a Penn State-branded SPA dashboard, a Pannellum-powered multi-scene panoramic viewer, and an animated budget tracker.',
+        'A 360° virtual tour and showcase of the redesigned Mechanical Engineering hallway in the Reber Building, built for the Kinetic Engineering Collective capstone. Penn State-branded dashboard, a Pannellum multi-scene panorama viewer and an animated budget tracker.',
       link: 'https://ilhamkassim.github.io/showcase-website/',
-      tech: ['Next.js', 'React', 'Pannellum', 'SPA', 'WebGL'],
-      featured: true,
-      image: '/projects/reber-building.jpg',
+      tech: ['JavaScript', 'Pannellum', 'WebGL', 'SPA'],
+      category: ['web'],
     },
     {
-      title: 'Shariah Algo Trader',
+      title: 'Aqildo Photo CRM',
       description:
-        'Engineered a quantitative trading bot on a $100K paper portfolio via the Alpaca API, operating exclusively within a Shariah-compliant equity universe and outperforming the S&P 500 by 2.5% and the SPUS ETF by 5% within the first week. Built a FastAPI backend and React/TypeScript dashboard for real-time portfolio, compliance, and factor-ranking visibility, with a pytest-covered test suite.',
-      link: 'https://shariah-algo-trader.onrender.com',
-      tech: [
-        'Python',
-        'FastAPI',
-        'Alpaca API',
-        'React',
-        'TypeScript',
-        'Quantitative Investing',
-      ],
-      featured: true,
-      image: '/projects/shariah-algo-trader.jpg',
+        'A CRM for a convocation photography agency: photographer vetting, events, packages, time slots, the booking lifecycle and a two-stage payment split. The domain layer is framework-free and covered by 65 tests.',
+      link: 'https://github.com/IlhamKassim/aqildophoto-agency',
+      tech: ['Next.js', 'TypeScript', 'SQLite', 'Vitest'],
+      category: ['web'],
     },
     {
-      title: 'Social Nutrition Label',
+      title: 'Inbox sort: Jev vs Cursor',
       description:
-        'A Chrome Extension that uses the Gemini API to analyze social media post credibility, factual alignment, and visual integrity to combat misinformation.',
-      link: 'https://github.com/IlhamKassim/laila-coders',
-      tech: ['Gemini API', 'Chrome Extension', 'JavaScript', 'AI/ML'],
-      featured: true,
-    },
-    {
-      title: 'Computer Architecture Design Space Explorer',
-      description:
-        'A C++ simulation framework that automates Design Space Exploration for processor microarchitecture, evaluating up to 1,000 distinct processor and cache configurations per run. Includes a heuristic search algorithm across an 18-dimensional design space, optimizing for execution time or Energy Delay Product while enforcing cache hierarchy constraints.',
-      link: 'https://github.com/IlhamKassim/cpu-architecture-dse',
-      tech: ['C++', 'Computer Architecture', 'Shell Scripting'],
-      featured: true,
-    },
-    {
-      title: 'Qwen Shariah Autopilot',
-      description:
-        "Built on Qwen Cloud for the Global AI Hackathon Series, adding an autonomous decision layer on top of the Shariah Algo Trader's Shariah-compliant signal engine.",
-      link: 'https://github.com/IlhamKassim/qwen-shariah-autopilot',
-      tech: ['Qwen', 'AI/ML', 'Algorithmic Trading'],
-    },
-    {
-      title: 'Thread Scheduler (Operating Systems)',
-      description:
-        'A multithreaded CPU thread scheduler supporting FCFS, SRTF, and MLFQ scheduling policies using pthreads, replicating real-life CPU and I/O timing to generate Gantt chart outputs for thread execution.',
-      link: '#',
-      tech: ['C++', 'Pthreads', 'Operating Systems', 'Process Scheduling'],
-    },
-    {
-      title: 'Personal Portfolio Website',
-      description:
-        'This site is a responsive personal portfolio built with Next.js App Router, TypeScript, and Tailwind CSS, featuring dark mode, Framer Motion animations, and SEO-optimized metadata.',
-      link: 'https://github.com/IlhamKassim/ilham-portfolio',
-      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'Framer Motion'],
-    },
-    {
-      title: 'MyInvois Middleware',
-      description:
-        'Middleware that automates LHDN MyInvois e-invoicing for social-commerce sellers, so small merchants stay compliant without hand-entering every invoice.',
-      link: 'https://github.com/IlhamKassim/myinvois',
-      tech: ['Express', 'Prisma', 'BullMQ', 'Redis'],
+        'I labelled 10 of my own emails, then let TypeSafe Jev and Cursor sort them. Jev named every email type correctly for about $0.0003. Cursor matched my "do it now" pile better. A smell test, not a benchmark.',
+      link: 'https://github.com/IlhamKassim/jev-sandbox',
+      tech: ['TypeSafe Jev', 'TypeScript', 'Python'],
+      category: ['ai'],
     },
     {
       title: 'AI Resume Builder',
       description:
-        'Built an AI-powered resume tailoring pipeline using the Claude API with Zod-validated schemas to guarantee structured, ATS-safe output. Engineered as a Next.js 16 App Router application with a Vitest test suite covering prompt construction, schema validation, and error handling.',
+        'Tailors a resume to a job description with the Claude API. Zod schemas keep the output structured and ATS-safe, and a Vitest suite covers prompt construction, validation and error handling.',
       link: 'https://github.com/IlhamKassim/resume-builder',
       tech: ['Next.js', 'TypeScript', 'Anthropic API', 'Zod', 'Vitest'],
+      category: ['ai', 'web'],
+    },
+    {
+      title: 'Social Nutrition Label',
+      description:
+        'A Chrome extension that uses the Gemini API to rate a social media post on credibility, factual alignment and visual integrity, so misinformation is easier to spot.',
+      link: 'https://github.com/IlhamKassim/laila-coders',
+      tech: ['Gemini API', 'Chrome Extension', 'JavaScript'],
+      category: ['ai'],
+    },
+    {
+      title: 'Qwen Shariah Autopilot',
+      description:
+        "Built on Qwen Cloud for the Global AI Hackathon Series. Adds an autonomous decision layer on top of ShariahTrading's signal engine.",
+      link: 'https://github.com/IlhamKassim/qwen-shariah-autopilot',
+      tech: ['Qwen', 'Python', 'Algorithmic Trading'],
+      category: ['ai', 'data'],
+    },
+    {
+      title: 'MyInvois Middleware',
+      description:
+        'Automates LHDN MyInvois e-invoicing for social-commerce sellers, so small merchants stay compliant without hand-entering every invoice.',
+      link: 'https://github.com/IlhamKassim/myinvois',
+      tech: ['Express', 'Prisma', 'BullMQ', 'Redis'],
+      category: ['web'],
+    },
+    {
+      title: 'Football Predictor',
+      description:
+        'Predicts exact scorelines for international matches with two LightGBM Poisson models trained on results back to 1872, then simulates whole knockout brackets. Outputs a self-contained HTML report.',
+      link: 'https://github.com/IlhamKassim/football-predictor',
+      tech: ['Python', 'LightGBM', 'Monte Carlo'],
+      category: ['data'],
+    },
+    {
+      title: 'Computer Architecture Design Space Explorer',
+      description:
+        'A C++ framework that searches an 18-dimensional processor and cache design space, evaluating up to 1,000 configurations per run and optimizing for execution time or energy delay product.',
+      link: 'https://github.com/IlhamKassim/cpu-architecture-dse',
+      tech: ['C++', 'Computer Architecture', 'Shell Scripting'],
+      category: ['systems'],
+    },
+    {
+      title: 'Thread Scheduler',
+      description:
+        'A multithreaded CPU scheduler in C++ with pthreads, supporting FCFS, SRTF and MLFQ, that replays CPU and I/O timing and draws a Gantt chart of the run.',
+      link: '#',
+      tech: ['C++', 'Pthreads', 'Operating Systems'],
+      category: ['systems'],
     },
     {
       title: 'Skincare Storefront',
       description:
-        'A skincare routine builder and storefront that takes a user from picking products to checkout in one flow, built on Next.js and Supabase.',
-      link: 'https://github.com/IlhamKassim/skincare-storefront',
+        'A routine builder and storefront that takes a shopper from picking products to checkout in one flow.',
+      link: 'https://skincare-storefront-henna.vercel.app',
+      repo: 'https://github.com/IlhamKassim/skincare-storefront',
       tech: ['Next.js', 'Supabase', 'Framer Motion'],
+      category: ['web'],
     },
     {
-      title: 'MLBB Predictive Analysis MVP',
+      title: 'MLBB Predictive Analysis',
       description:
-        'Analytics MVP for esports coaching, built with Python data pipelines and machine learning models to surface player performance insights.',
+        'An analytics MVP for esports coaching: Python data pipelines and machine learning models that surface player performance insights.',
       link: 'https://github.com/IlhamKassim/mlbb-predictive-analysis-mvp',
-      tech: [
-        'Python',
-        'Machine Learning',
-        'Data Analysis',
-        'Pandas',
-        'Scikit-learn',
-      ],
+      tech: ['Python', 'Pandas', 'Scikit-learn'],
+      category: ['data', 'ai'],
     },
     {
       title: 'AI in Fundraising Briefs',
       description:
         "Evaluation of generative AI and predictive-modeling tools for higher-ed fundraising. The research behind the pilot-project roadmaps delivered to Penn State's Division of Development and Alumni Relations.",
       link: '#',
-      tech: ['Research', 'Data Analysis', 'AI/ML', 'Technical Writing'],
+      tech: ['Research', 'AI/ML', 'Technical Writing'],
+      category: ['ai'],
     },
     {
       title: 'EduSpark Marketplace (Bootcamp)',
       description:
-        "Marketplace concept for local Borneo artisans, built during FutureLab.my's social enterprise bootcamp. Placed 3rd out of 20 competing teams in the closing pitch competition and earned a paid mentorship offer.",
+        "Marketplace concept for Borneo artisans, built during FutureLab.my's social enterprise bootcamp. Placed 3rd out of 20 teams in the final pitch and earned a paid mentorship.",
       link: '#',
-      tech: [
-        'Web Development',
-        'Social Enterprise',
-        'Project Management',
-        'Community Development',
-      ],
+      tech: ['Product', 'Social Enterprise', 'Pitching'],
+      category: ['web'],
     },
-  ],
+  ] as Project[],
 }

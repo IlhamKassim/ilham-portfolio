@@ -4,14 +4,14 @@ import { Download, ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Resume - Mohammad Ilham bin Kassim',
+  title: 'Resume',
   description: "Download Mohammad Ilham bin Kassim's resume in PDF format.",
 }
 
 export default function ResumePage() {
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 pb-16 pt-28">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="mb-6 text-4xl font-bold">Resume</h1>
           <p className="mb-8 text-muted-foreground">

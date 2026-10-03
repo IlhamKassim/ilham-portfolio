@@ -5,14 +5,14 @@ import Link from 'next/link'
 import JourneyTimeline from '@/components/JourneyTimeline'
 
 export const metadata: Metadata = {
-  title: 'My Journey - Mohammad Ilham bin Kassim',
+  title: 'My Journey',
   description: 'How I got from Papar, Malaysia to Penn State University.',
 }
 
 export default function JourneyPage() {
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 pb-16 pt-28">
         <div className="mx-auto max-w-3xl">
           <h1 className="mb-2 text-4xl font-bold">My Journey</h1>
           <p className="mb-12 text-muted-foreground">

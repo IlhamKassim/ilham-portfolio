@@ -1,6 +1,6 @@
 # Portfolio Content
 
-The content model for Ilham's personal portfolio site (`lib/data.ts` and the components that render it). This context governs how career/education/project facts are sourced, verified, and phrased for the site's audience (general public, followers, recruiters).
+The content model for Ilham's personal portfolio site (`lib/data.ts` and the components that render it). This context governs how career/education/project facts are sourced, verified, and phrased for the site's audience (prospective freelance clients first, then recruiters, followers and the general public).
 
 ## Language
 
@@ -21,14 +21,26 @@ A named group (e.g. "Languages & Frameworks," "Systems & AI," "Leadership & Oper
 _Avoid_: displaying the full ~90-item LinkedIn skill list; Skill Category membership is a deliberate edit, not a mirror of LinkedIn.
 
 **Primary Audience**:
-Recruiters — the reader every wording decision on the site is optimized for first. The site still serves general-public and follower visitors (named in the intro above), but as a secondary constraint: copy shouldn't become dry or jargon-only in service of recruiter-scannability.
-_Avoid_: treating "the audience" as undifferentiated; when a wording choice serves recruiters and general visitors differently, recruiters win.
+Prospective freelance clients: small teams, founders and students deciding whether to hire Ilham to build something or teach them. Every home-page wording decision is optimized for them first. Recruiters are the secondary audience and keep a clear path (résumé link in the hero, Experience section, "open to full-time roles" in Contact). Changed from "Recruiters" on 2026-10-04 when the site was repositioned freelance-first.
+_Avoid_: recruiter-only framing on the home page (status-first headlines, "seeking entry-level roles" as the lead message); hiding the résumé entirely.
+
+**Service**:
+An item in the Build or Teach catalog (`profile.services` in `lib/data.ts`) with a code (B1, T1...), a starting price in USD and a unit. Prices are "from" figures, not quotes: the real quote is sent after a conversation.
+_Avoid_: presenting a Service price as a fixed final price; listing a Service Ilham hasn't shown he can deliver (each should map to at least one Project or role on the site).
+
+**Community Role**:
+Ongoing, unpaid or volunteer involvement that doubles as proof for Teach services: KrackedDevs Ambassador (Borneo branch events), DeckerGUI Developers contributor, The Borneo co-founder. Sourced from Ilham directly (2026-10-04), not from the LinkedIn export.
+_Avoid_: describing a Community Role as client work or employment.
+
+**Client Proof**:
+Testimonials, client names or outcomes from paid freelance work. None exist on the site yet. Never invent or paraphrase one; add only what Ilham supplies.
 
 **Journey Page**:
 A separate route (`/journey`) telling Ilham's chronological origin story, from childhood in Papar through arriving at Penn State. Sourced directly from Ilham's own account in conversation, not from the Source of Record (LinkedIn export / resume) — those govern career facts, not personal narrative. Deliberately off the main scroll path so it doesn't compete for recruiter scan-time; its Primary Audience is general-public/follower readers, the opposite of the site-wide default.
-_Avoid_: holding this page to the Source of Record rule or the Primary Audience: Recruiters rule — both are explicitly overridden here by design.
+_Avoid_: holding this page to the Source of Record rule or the Primary Audience rule. Both are explicitly overridden here by design.
 
 ## Resolved decisions
 
 - **Metrics audit (2026-07-07)**: every quantified claim in Experience was reviewed against what Ilham could verify. Non-verifiable numbers were removed or rewritten as qualitative impact statements rather than invented figures (e.g. DDAR alumni count corrected to 200+; NSO mentee count corrected to 5; peer-reviewed-article and prep-time-reduction claims dropped from the poultry research and Online Program Moderator roles). This is the reference precedent for how to handle any future unverifiable stat.
 - **Projects list merge (2026-07-07)**: the site's Projects section now merges the old hand-picked list, the Source of Record's project list, and recently-active GitHub repos not yet declared on LinkedIn. Projects without a public repo (e.g. AI in Fundraising Briefs) are still shown as description-only cards with no link, rather than dropped.
+- **Freelance-first repositioning (2026-10-04)**: home page reordered to Hero, Services (with quote builder), Work, About, Experience, Notes, Contact. Experience on the home page shows only `highlight: true` roles; the full history stays one click away and in the résumé. Project copy for SabahKu, PolitikKu, ShariahTrading, Langkah and the newer repos was sourced from their live sites, READMEs and Ilham's own LinkedIn posts. PolitikKu is described as team work ("we"), since Ilham's posts credit the team.

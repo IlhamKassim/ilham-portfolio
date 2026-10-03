@@ -1,149 +1,97 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Mail, Phone, Linkedin, MapPin } from 'lucide-react'
-import Section from './Section'
+import { Mail, MessageCircle, Linkedin, Github, Plus } from 'lucide-react'
+import Section, { Accent } from './Section'
 import { profile } from '@/lib/data'
-import { useScrollReveal, reveal } from '@/lib/scroll-reveal'
+import { whatsappLink, mailtoLink } from '@/lib/contact'
+
+const channels = [
+  {
+    icon: MessageCircle,
+    label: 'WhatsApp',
+    value: profile.phone,
+    href: whatsappLink(
+      "Hi Ilham, I found your site and I'd like to talk about a project.",
+    ),
+    note: 'Fastest. Quotes and quick questions.',
+  },
+  {
+    icon: Mail,
+    label: 'Email',
+    value: profile.email,
+    href: mailtoLink('Project enquiry', 'Hi Ilham,\n\n'),
+    note: 'For longer briefs and attachments.',
+  },
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    value: 'in/ilhamkassim',
+    href: profile.linkedin,
+    note: 'Build notes and full-time roles.',
+  },
+  {
+    icon: Github,
+    label: 'GitHub',
+    value: 'IlhamKassim',
+    href: profile.github,
+    note: 'Source for most of what you see here.',
+  },
+]
 
 export default function Contact() {
-  const { ref, isInView, reducedMotion } = useScrollReveal()
-
-  const contactMethods = [
-    {
-      icon: Mail,
-      label: 'Email',
-      value: profile.email,
-      href: `mailto:${profile.email}`,
-      description: 'Send me an email',
-    },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: profile.phone,
-      href: `tel:${profile.phone}`,
-      description: 'Call or text me',
-    },
-    {
-      icon: MapPin,
-      label: 'Location',
-      value: profile.location,
-      href: '#',
-      description: 'Based in State College, PA',
-    },
-    {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      value: 'Connect with me',
-      href: profile.linkedin,
-      description: 'Professional networking',
-    },
-  ]
-
   return (
     <Section
       id="contact"
-      title="Get In Touch"
-      intro="Open to internships and entry-level roles (Summer 2026), collaborations, and conversation."
+      index="06"
+      eyebrow="Contact"
+      title={
+        <>
+          Got a problem worth building for? <Accent>Tell me about it.</Accent>
+        </>
+      }
+      intro={`I'm in ${profile.location} (${profile.timezone}) and work with clients anywhere. I'm also open to full-time roles if the work is right.`}
     >
-      <div ref={ref} className="mx-auto max-w-4xl">
-        <motion.div
-          {...reveal(isInView, {}, reducedMotion)}
-          className="grid gap-6 md:grid-cols-2"
-        >
-          {contactMethods.map((method, index) => (
-            <motion.div
-              key={index}
-              {...reveal(isInView, { delay: index * 0.1 }, reducedMotion)}
-            >
-              <Card className="h-full transition-shadow hover:shadow-md">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="rounded-lg bg-primary/10 p-3">
-                      <method.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="mb-1 font-semibold text-foreground">
-                        {method.label}
-                      </h3>
-                      <p className="mb-3 text-sm text-muted-foreground">
-                        {method.description}
-                      </p>
-                      {method.href !== '#' ? (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          asChild
-                          className="w-full"
-                        >
-                          <a
-                            href={method.href}
-                            target={
-                              method.href.startsWith('http')
-                                ? '_blank'
-                                : undefined
-                            }
-                            rel={
-                              method.href.startsWith('http')
-                                ? 'noopener noreferrer'
-                                : undefined
-                            }
-                          >
-                            {method.value}
-                          </a>
-                        </Button>
-                      ) : (
-                        <p className="font-medium text-foreground">
-                          {method.value}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:col-span-7">
+          {channels.map((c) => (
+            <li key={c.label}>
+              <a
+                href={c.href}
+                target={c.href.startsWith('http') ? '_blank' : undefined}
+                rel={
+                  c.href.startsWith('http') ? 'noopener noreferrer' : undefined
+                }
+                className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/50"
+              >
+                <c.icon className="h-5 w-5 text-primary" />
+                <p className="mt-4 font-semibold">{c.label}</p>
+                <p className="mt-0.5 break-all font-mono text-sm text-muted-foreground group-hover:text-foreground">
+                  {c.value}
+                </p>
+                <p className="mt-3 text-sm text-muted-foreground">{c.note}</p>
+              </a>
+            </li>
           ))}
-        </motion.div>
+        </ul>
 
-        <motion.div
-          {...reveal(isInView, { delay: 0.4 }, reducedMotion)}
-          className="mt-12 text-center"
-        >
-          <Card>
-            <CardContent className="p-8">
-              <h3 className="mb-4 text-xl font-semibold">
-                Let&apos;s Work Together
-              </h3>
-              <p className="mb-6 text-muted-foreground">
-                I&apos;m always interested in new opportunities, collaborations,
-                and meaningful conversations. Whether you have a project in mind
-                or just want to connect, I&apos;d love to hear from you.
-              </p>
-              <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                <Button size="lg" asChild>
-                  <a
-                    href={`mailto:${profile.email}?subject=Let&apos;s Connect`}
-                  >
-                    <Mail className="mr-2 h-4 w-4" />
-                    Send Email
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <a
-                    href={profile.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Linkedin className="mr-2 h-4 w-4" />
-                    Connect on LinkedIn
-                  </a>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
+        <div className="lg:col-span-5">
+          <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            Common questions
+          </h3>
+          <div className="divide-y divide-border border-y border-border">
+            {profile.faq.map((f) => (
+              <details key={f.q} className="group py-4">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-medium">
+                  {f.q}
+                  <Plus className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-45" />
+                </summary>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {f.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
       </div>
     </Section>
   )

@@ -1,19 +1,27 @@
 import { Metadata } from 'next'
 import { SITE_URL } from './site'
 
+const title = 'Ilham Kassim | Freelance web, AI and data developer'
+const description =
+  'Freelance developer from Sabah, Malaysia. Websites, web apps, AI features and data dashboards for clients worldwide, plus programming tutoring. Builder of SabahKu and ShariahTrading. B.S. Computer Engineering, Penn State.'
+
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Mohammad Ilham bin Kassim | Computer Engineering Graduate',
-  description:
-    'Computer Engineering graduate of Penn State University specializing in AI & Systems Programming, Leadership & Innovation. Building human-centered systems and data-driven products.',
+  title: {
+    default: title,
+    template: '%s | Ilham Kassim',
+  },
+  description,
   keywords: [
     'Mohammad Ilham bin Kassim',
-    'Computer Engineering',
-    'Penn State',
-    'AI',
-    'Machine Learning',
-    'Systems Programming',
-    'Leadership',
+    'Ilham Kassim',
+    'freelance developer Malaysia',
+    'freelance web developer Sabah',
+    'Next.js developer',
+    'AI integration',
+    'data dashboard',
+    'programming tutor',
+    'Penn State Computer Engineering',
   ],
   authors: [{ name: 'Mohammad Ilham bin Kassim' }],
   creator: 'Mohammad Ilham bin Kassim',
@@ -21,25 +29,14 @@ export const defaultMetadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
-    title: 'Mohammad Ilham bin Kassim | Computer Engineering Graduate',
-    description:
-      'Computer Engineering graduate of Penn State University specializing in AI & Systems Programming, Leadership & Innovation.',
-    siteName: 'Ilham Kassim Portfolio',
-    images: [
-      {
-        url: '/og.png',
-        width: 1200,
-        height: 630,
-        alt: 'Mohammad Ilham bin Kassim - Computer Engineering Graduate',
-      },
-    ],
+    title,
+    description,
+    siteName: 'Ilham Kassim',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mohammad Ilham bin Kassim | Computer Engineering Graduate',
-    description:
-      'Computer Engineering graduate of Penn State University specializing in AI & Systems Programming, Leadership & Innovation.',
-    images: ['/og.png'],
+    title,
+    description,
   },
   robots: {
     index: true,

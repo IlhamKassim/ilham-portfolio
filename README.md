@@ -37,6 +37,8 @@ A modern, responsive personal portfolio built with Next.js 14 App Router, TypeSc
 │   ├── error.tsx          # Error UI
 │   ├── robots.ts          # Robots.txt
 │   ├── sitemap.ts         # Sitemap
+│   ├── opengraph-image.tsx # Generated social share image
+│   ├── journey/           # Personal story page
 │   ├── resume/            # Resume download page
 │   └── api/               # API routes
 ├── components/            # React components
@@ -58,39 +60,27 @@ A modern, responsive personal portfolio built with Next.js 14 App Router, TypeSc
 
 ### Update Content
 
-Edit `lib/data.ts` to update your personal information:
+All site copy lives in `lib/data.ts`:
 
-```typescript
-export const profile = {
-  name: 'Your Name',
-  role: 'Your Role',
-  email: 'your.email@example.com',
-  // ... update other fields
-}
-```
+- `services`: the Build and Teach catalog. Each item has a `code`, `title`, `description`, a starting `price` in USD and a `unit` (`project`, `hour`, `session` or `workshop`). Non-project units get a quantity stepper in the quote builder.
+- `process`, `faq`: the "how it works" steps and the contact FAQ.
+- `projects`: set `featured: true` for a large card with a screenshot (`image` in `/public/projects/`), `live: true` to list it in the hero's "Live right now" card, and `category` for the Work filters.
+- `experiences`: `highlight: true` shows a role on the home page; the rest sit behind "Show full history".
+- `notes`: build-note teasers that link to LinkedIn.
+- `whatsapp`: digits only, used for `wa.me` quote links.
+
+### Quote builder
+
+`components/Services.tsx`. Visitors tick services, adjust quantities and send the list through a prefilled WhatsApp message or email (`lib/contact.ts`). Nothing is sent from the site and there is no backend. A visitor's half-built selection is remembered in `localStorage`.
 
 ### Replace Resume
 
 1. Replace `/public/Ilham_Resume.pdf` with your actual resume
-2. The download button will automatically work
+2. The download buttons will automatically work
 
-### Replace Profile Image
+### Customize Colors and Type
 
-1. Add your photo to `/public/images/`
-2. Update the image path in `components/Hero.tsx`
-
-### Customize Colors
-
-Edit `tailwind.config.js` to change the brand colors:
-
-```javascript
-colors: {
-  brand: {
-    600: '#your-color', // Main brand color
-    700: '#your-darker-color',
-  }
-}
-```
+Colors are HSL tokens in `app/globals.css` (`:root` for light, `.dark` for dark). The violet accent is `--primary`. Fonts (Inter, Instrument Serif, JetBrains Mono) are loaded in `app/layout.tsx`.
 
 ## 🚀 Deployment
 
